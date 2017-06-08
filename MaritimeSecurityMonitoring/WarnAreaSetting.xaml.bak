@@ -1,0 +1,272 @@
+﻿<Window x:Class="MaritimeSecurityMonitoring.WarnAreaSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="防护区管理" Height="482.5" Width="1000" MaxWidth="1000" MinWidth="1000" MaxHeight="482.5" MinHeight="482.5"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize" MouseLeftButtonDown="dragMoveWindow">
+    <Window.Resources>
+        <Style x:Key="CenterBox" TargetType="{x:Type TextBox}">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Style.Triggers>
+                <Trigger Property="IsReadOnly" Value="False">
+                    <Setter Property="Background" Value="#FFF0F0F0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <ControlTemplate x:Key="CornerLabel" TargetType="{x:Type Label}">
+            <Border BorderThickness="0" CornerRadius="8,8,0,0" Background="#FF4A79D8">
+                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="CornerButton" TargetType="{x:Type Button}">
+            <Border x:Name="bd" BorderThickness="0" CornerRadius="5 5 5 5" Background="#FF4A79D8">
+                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF6D9DFF"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF005AE2"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="bd" Property="Background" Value="silver"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="CornerToggleButton" TargetType="{x:Type ToggleButton}">
+            <Border x:Name="bd" BorderThickness="0" CornerRadius="5 5 5 5" Background="#FF4A79D8">
+                <ContentPresenter x:Name="cp" Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF6D9DFF"/>
+                </Trigger>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF005AE2"/>
+                    <Setter TargetName="cp" Property="Content" Value="完成"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="bd" Property="Background" Value="silver"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Style x:Key="SwitchButton1" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="bd1" BorderThickness="1 1 1 0" BorderBrush="Gray" Background="LightGray" CornerRadius="5 0 0 0">
+                            <ContentPresenter x:Name="cp" Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 2 10 0"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd1" Property="Background" Value="#FFF1F1F1"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="bd1" Property="Background" Value="White"/>
+                                <Setter TargetName="bd1" Property="Height" Value="29"/>
+                                <Setter TargetName="bd1" Property="BorderThickness" Value="1 1 0 0"/>
+                                <Setter TargetName="cp" Property="Margin" Value="10 2 11 0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="SwitchButton2" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="bd2" BorderThickness="1 1 1 0" BorderBrush="Gray" Background="LightGray" CornerRadius="0 5 0 0">
+                            <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 2 10 0"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd2" Property="Background" Value="#FFF1F1F1"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="bd2" Property="Background" Value="White"/>
+                                <Setter TargetName="bd2" Property="Height" Value="29"/>
+                                <Setter TargetName="bd2" Property="BorderThickness" Value="0 1 1 0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Template="{StaticResource CornerLabel}" FontSize="20" Foreground="White">防护区管理</Label>
+        <Button Height="22" Width="22" Margin="0 0 10 0" HorizontalAlignment="Right" BorderThickness="0" Click="closeWindowClick">
+            <Image Source="Image/Close_new.png"/>
+            <Button.Background>
+                <SolidColorBrush Color="#FF4A79D8"/>
+            </Button.Background>
+        </Button>
+
+        <Border Grid.Row="1" BorderThickness="0" Background="White" CornerRadius="0 0 8 8">
+            <Grid>
+                <Border Grid.Row="0" BorderThickness="1" BorderBrush="Gray" CornerRadius="0 5 5 5" Margin="40 50 40 35.5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2.6*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <DataGrid Grid.Column="0" x:Name="PipelineDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" Background="Transparent" RowBackground="Transparent" 
+                                  HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" IsReadOnly="True" FontSize="20" Margin="40 40 15 44" Visibility="Collapsed" 
+                                  CanUserResizeColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False" BorderThickness="1 1 0 0" BorderBrush="Black" RowHeaderWidth="0">
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="{x:Type DataGridColumnHeader}">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                    <Setter Property="Height" Value="45"/>
+                                    <Setter Property="BorderBrush" Value="Black"/>
+                                    <Setter Property="BorderThickness" Value="0 0 1 1"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.CellStyle>
+                                <Style TargetType="{x:Type DataGridCell}">
+                                    <Setter Property="Height" Value="45"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#FFCADDFF"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.CellStyle>
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Header="编号" Width="4*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox x:Name="id" Text="{Binding ID}" IsReadOnly="True" Style="{StaticResource CenterBox}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="名称" Width="4*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox x:Name="name" Text="{Binding Name}" IsReadOnly="{Binding ReadOnly}" Style="{StaticResource CenterBox}" MaxLength="10"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="宽度" Width="4*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox x:Name="width" Text="{Binding Width}" IsReadOnly="{Binding ReadOnly}" Style="{StaticResource CenterBox}" MaxLength="3"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="报警等级" Width="6*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox x:Name="level" Text="{Binding Level}" IsReadOnly="True" Style="{StaticResource CenterBox}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="防护区描述" Width="14*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox x:Name="note" Text="{Binding Description}" IsReadOnly="{Binding ReadOnly}" Style="{StaticResource CenterBox}" MaxLength="50"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <DataGrid Grid.Column="0" x:Name="PolygonDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" Background="Transparent" RowBackground="Transparent" 
+                                  HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" IsReadOnly="True" FontSize="20" Margin="40 40 15 44" 
+                                  CanUserResizeColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False" BorderThickness="1 1 0 0" BorderBrush="Black" RowHeaderWidth="0">
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="{x:Type DataGridColumnHeader}">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                    <Setter Property="Height" Value="45"/>
+                                    <Setter Property="BorderBrush" Value="Black"/>
+                                    <Setter Property="BorderThickness" Value="0 0 1 1"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.CellStyle>
+                                <Style TargetType="{x:Type DataGridCell}">
+                                    <Setter Property="Height" Value="45"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#FFCADDFF"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.CellStyle>
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Header="编号" Width="4*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox x:Name="id" Text="{Binding ID}" IsReadOnly="True" Style="{StaticResource CenterBox}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="名称" Width="5*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox x:Name="name" Text="{Binding Name}" IsReadOnly="{Binding ReadOnly}" Style="{StaticResource CenterBox}" MaxLength="10"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="报警等级" Width="6*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox x:Name="level" Text="{Binding Level}" IsReadOnly="True" Style="{StaticResource CenterBox}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="防护区描述" Width="14*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox x:Name="note" Text="{Binding Description}" IsReadOnly="{Binding ReadOnly}" Style="{StaticResource CenterBox}" MaxLength="50"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <Grid Grid.Column="1" Margin="0,85,0,44">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.3*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <ToggleButton Grid.Row="0" Grid.Column="0" Name="tb0" Tag="0" Template="{StaticResource CornerToggleButton}" Height="35" Width="90" FontSize="20" Foreground="White" Click="Edit_Click">编辑</ToggleButton>
+                            <Button Grid.Row="0" Grid.Column="1" Name="b0" Tag="0" Template="{StaticResource CornerButton}" Height="35" Width="90" FontSize="20" Foreground="White" Click="Delete_Click">删除</Button>
+
+                            <ToggleButton Grid.Row="1" Grid.Column="0" Name="tb1" Tag="1" Template="{StaticResource CornerToggleButton}" Height="35" Width="90" FontSize="20" Foreground="White" Click="Edit_Click">编辑</ToggleButton>
+                            <Button Grid.Row="1" Grid.Column="1" Name="b1" Tag="1" Template="{StaticResource CornerButton}" Height="35" Width="90" FontSize="20" Foreground="White" Click="Delete_Click">删除</Button>
+
+                            <ToggleButton Grid.Row="2" Grid.Column="0" Name="tb2" Tag="2" Template="{StaticResource CornerToggleButton}" Height="35" Width="90" FontSize="20" Foreground="White" Click="Edit_Click">编辑</ToggleButton>
+                            <Button Grid.Row="2" Grid.Column="1" Name="b2" Tag="2" Template="{StaticResource CornerButton}" Height="35" Width="90" FontSize="20" Foreground="White" Click="Delete_Click">删除</Button>
+
+                            <ToggleButton Grid.Row="3" Grid.Column="0" Name="tb3" Tag="3" Template="{StaticResource CornerToggleButton}" Height="35" Width="90" FontSize="20" Foreground="White" Click="Edit_Click">编辑</ToggleButton>
+                            <Button Grid.Row="3" Grid.Column="1" Name="b3" Tag="3" Template="{StaticResource CornerButton}" Height="35" Width="90" FontSize="20" Foreground="White" Click="Delete_Click">删除</Button>
+
+                            <ToggleButton Grid.Row="4" Grid.Column="0" Name="tb4" Tag="4" Template="{StaticResource CornerToggleButton}" Height="35" Width="90" FontSize="20" Foreground="White" Click="Edit_Click">编辑</ToggleButton>
+                            <Button Grid.Row="4" Grid.Column="1" Name="b4" Tag="4" Template="{StaticResource CornerButton}" Height="35" Width="90" FontSize="20" Foreground="White" Click="Delete_Click">删除</Button>
+                        </Grid>
+                    </Grid>
+                </Border>
+                <Button Grid.Row="0" x:Name="polygonBtn" Style="{StaticResource SwitchButton1}" Click="PolygonClick" IsEnabled="False" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,22,0,0">多边形防护区管理</Button>
+                <Button Grid.Row="0" x:Name="pipelineBtn" Style="{StaticResource SwitchButton2}" Click="PipelineClick" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="222,22,0,0">管道防护区管理</Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

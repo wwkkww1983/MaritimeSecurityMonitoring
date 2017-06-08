@@ -1,0 +1,752 @@
+﻿using dataAnadll;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows.Threading;
+
+namespace MaritimeSecurityMonitoring
+{
+    /// <summary>
+    /// TrackVideoPlayback.xaml 的交互逻辑
+    /// </summary>
+    public partial class TrackVideoPlayback : Page
+    {
+        private int current = 1;
+        private int trackVideoPlaybackcurrentPage = 1;
+        private int sumpage = -1;
+        private int videoState=-2;
+        private long start;
+        private long end;
+        private DateTime SelectTimeStart;
+        private DateTime SelectTimeEnd;
+        private long VideoPlayBackTimeStart;//联动对象时间戳
+        private long VideoPlayBackTimetEnd;//联动对象时间戳
+        private string SlectDevice;
+        int DeviceType = 0;
+        DispatcherTimer playTimer;
+        IntPtr telephotoRealWndHandle;//视频窗口句柄
+        int pos;
+        ObservableCollection<TrackingEvent> eventList = new ObservableCollection<TrackingEvent>();
+        Dictionary<int, string> eventTypeMap = new Dictionary<int, string> { { 1, "红外" }, { 3, "长焦" }, { 4, "广角" } };
+        TrackEventProvider trackEventProvider;
+
+        Thread thread;//播放视频线程
+        private int isMouseDown;
+        private int pause = 0;
+        public TrackVideoPlayback()
+        {
+            InitializeComponent();
+
+            StartTime.SetTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1, 0, 0, 0);
+            EndTime.SetTime = DateTime.Now;
+
+            TrackPageNumber tpn = new TrackPageNumber();
+            pageNumber.DataContext = tpn;
+            playTimer = new DispatcherTimer();
+            playTimer.Interval = TimeSpan.FromMilliseconds(333);
+            playTimer.Tick += GetPlayBack_Pos;
+            playTimer.Start();
+            sliderPosition.MouseDown += sliderPostionMouseDown;
+            sliderPosition.MouseMove+= SetPlayBack_Pos;
+            sliderPosition.Minimum = 0;
+            sliderPosition.Maximum = 100;
+            sliderPosition.IsMoveToPointEnabled = true;
+            telephotoPictureBox.change_Pic("..\\..\\Image\\video.png");
+        }
+        void sliderPostionMouseDown(object sender, MouseEventArgs e)
+        {
+            isMouseDown = 1;
+        }
+       
+        void GetPlayBack_Pos(object sender, EventArgs e)
+        {
+
+            int pos;
+            if (isMouseDown==0 &&  videoState >= 0)
+            {
+                pos = NVRCsharpDemo.DVRAPI.GetInstance().Playback_GetPos(videoState);
+                sliderPosition.Value = pos;
+
+            }
+        }
+        void SetPlayBack_Pos(object sender, MouseEventArgs e)
+        {
+            if (videoState >= 0)
+            {
+                if (e.LeftButton == MouseButtonState.Pressed)
+                {
+                    isMouseDown = 1;
+                    NVRCsharpDemo.DVRAPI.GetInstance().Playback_SetPos(videoState, (int)sliderPosition.Value);
+                    isMouseDown = 0;
+                }
+            }
+        }
+        public void realPlay()//开始播放
+        {
+            int sign = NVRCsharpDemo.DVRAPI.GetInstance().DVRAPI_Init();//初始化DVR登录
+            int devicetype = 0;
+            if (SlectDevice == "长焦")
+            {
+                devicetype = 3;
+            }
+            else if (SlectDevice == "红外")
+            {
+                devicetype = 1;
+            }
+            else if (SlectDevice == "广角")
+            {
+                devicetype = 4;
+            }
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Stop_PlayBack(videoState);
+                videoState = -2;
+            }
+            videoState = NVRCsharpDemo.DVRAPI.GetInstance().Start_PlayBack_ByTime(devicetype, telephotoRealWndHandle,start,end);//视频回放，默认为长焦
+        }
+        private void startPlay()//获取视频句柄
+        {
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Stop_PlayBack(videoState);
+                videoState = -2;
+            }
+            if (thread!=null && thread.IsAlive)
+            {
+                thread.Abort();
+                thread = null;
+            }
+            telephotoRealWndHandle = telephotoPictureBox.Handle;//回放句柄
+            thread = new Thread(new ThreadStart(realPlay));
+            thread.Start();
+            thread.Join();
+        }
+        private void chooseClick(object sender, RoutedEventArgs e)//确定开始播放时间段
+        {           
+            try
+            {
+                start = dataTime()[0];//开始时间
+                end = dataTime()[1];//结束时间
+                if (vidioType.SelectedIndex == 0)
+                {
+                    DeviceType = 3;
+                }
+                else if (vidioType.SelectedIndex == 2)
+                {
+                    DeviceType = 1;
+                }
+                else if (vidioType.SelectedIndex == 1)
+                {
+                    DeviceType = 4;
+                }
+                trackEventProvider = new TrackEventProvider(SelectTimeStart, SelectTimeEnd, DeviceType, 20);
+               // start = end = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBoxX.Show("提示",ex.Message);
+                return;
+            }
+            eventList.Clear();
+            List<dataAnadll.TrackEvent> TrackEventResultList = new List<dataAnadll.TrackEvent>();
+            try
+            {
+                trackEventProvider.GetPageNum(out sumpage);
+                trackEventProvider.GetPage(1, out TrackEventResultList);
+                trackVideoPlaybackcurrentPage = 1;
+            }
+            catch(Exception ex)
+            {
+                MessageBoxX.Show("提示",ex.Message);
+            }             
+            for (int i = 0; i < TrackEventResultList.Count; i++)
+            {
+                TrackingEvent te = new TrackingEvent
+                {
+                    ID = i,
+                    StartTime = TrackEventResultList[i].StartTime.ToString(),
+                    EndTime = TrackEventResultList[i].EndTime.ToString(),
+                    EventName = TrackEventResultList[i].Name.ToString(),
+                    EventType = eventTypeMap[TrackEventResultList[i].Type],
+                    Description = TrackEventResultList[i].Description,
+                };
+                eventList.Add(te);
+            }
+            TrackListView.DataContext = eventList;
+            totalPages.Text = sumpage.ToString();
+            currentPage.Text = "1";
+            rule.Max = sumpage;
+        }
+        private void playBtn_Click(object sender, RoutedEventArgs e)//开始播放
+        {
+            try
+            {
+                if (TrackListView.SelectedItem == null)
+                {
+                    MessageBoxX.Show("提示", "请先选择跟踪事件");
+                }
+                if (videoState < 0)
+                {
+                    SlectDevice = vidioType.Text;
+                    startPlay();
+                    pause = 0;
+                }
+                if (videoState >= 0)
+                {
+                    playBtn.IsEnabled = false;
+                    playBtn.Visibility = Visibility.Collapsed;
+                    pauseBtn.IsEnabled = true;
+                    pauseBtn.Visibility = Visibility.Visible;
+                    if (pause == 0)
+                    {
+                        ;
+                    }
+                    else if (pause == 1)
+                    {
+                        NVRCsharpDemo.DVRAPI.GetInstance().Playback_Restart(videoState);
+                    }
+                    else if (pause == 2)
+                    {
+                        NVRCsharpDemo.DVRAPI.GetInstance().Playback_Resume(videoState);
+                    }
+                    pause = 0;
+                }
+                else
+                {
+                    playBtn.IsEnabled = true;
+                    playBtn.Visibility = Visibility.Visible;
+                    pauseBtn.IsEnabled = false;
+                    pauseBtn.Visibility = Visibility.Collapsed;
+                    telephotoPictureBox.change_Pic("..\\..\\Image\\video.png");
+                }
+                
+            }
+            catch
+            {
+                MessageBoxX.Show("错误","发生未知错误");
+            }
+
+        }
+        private long[] dataTime()//获得时间控件的时间戳
+        {
+            string start = StartTime.year.Text + StartTime.month.Text + StartTime.day.Text + " " + StartTime.hour.Text + StartTime.minute.Text + StartTime.second.Text;
+            string end = EndTime.year.Text + EndTime.month.Text + EndTime.day.Text + " " + EndTime.hour.Text + EndTime.minute.Text + EndTime.second.Text;
+            try
+            {
+                SelectTimeStart = Convert.ToDateTime(start);//string转datatime（end）
+                SelectTimeEnd = Convert.ToDateTime(end);//string转datatime（end）
+            }
+            catch
+            {
+                throw new Exception("选择的时间格式不合法");
+            }
+            long linkStart = (long)GetTimeStamp(SelectTimeStart);//datatime时间戳（end）
+            long linkEnd = (long)GetTimeStamp(SelectTimeEnd);//datatime时间戳（end）
+            if (linkEnd <= linkStart)
+                throw new Exception("选择的时间段不合法");
+            long[] times = { linkStart, linkEnd };
+            return times;
+        }
+        private int GetTimeStamp(DateTime dt)//datatime转时间戳
+        {
+            DateTime dateStart = new DateTime(1970, 1, 1, 0, 0, 0);
+            int timeStamp = (int)(dt - dateStart).TotalSeconds;
+            return timeStamp;
+        }
+        private void PlayerPause()
+        {
+            if (playBtn.Visibility==Visibility.Visible&&pauseBtn.Visibility==Visibility.Collapsed)
+            {
+                //mediaElement.Play();
+                playBtn.Visibility = Visibility.Collapsed;
+                pauseBtn.Visibility = Visibility.Visible;
+                mediaBtn.Visibility = Visibility.Collapsed;
+                try
+                {
+                    SlectDevice = vidioType.Text;
+                    startPlay();
+                }
+                catch
+                {
+                    MessageBoxX.Show("错误", "发生未知错误");
+                }
+            }
+            else if(pauseBtn.Visibility==Visibility.Visible&&playBtn.Visibility==Visibility.Collapsed)
+            {
+                //mediaElement.Pause();
+                playBtn.Visibility = Visibility.Visible;
+                pauseBtn.Visibility = Visibility.Collapsed;
+                mediaBtn.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                MessageBoxX.Show("错误提示", "未知的错误发生！");
+            }
+        }
+
+        private void mediaElement_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)//暂停播放
+        {
+            NVRCsharpDemo.DVRAPI.GetInstance().Stop_PlayBack(videoState);
+        }
+
+        DispatcherTimer timer = null;
+        private void mediaElement_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            //sliderPosition.Maximum = mediaElement.NaturalDuration.TimeSpan.TotalSeconds;
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += new EventHandler(timer_tick);
+            timer.Start();
+        }
+        private void timer_tick(object sender, EventArgs e)
+        {
+            /*
+            if (!sliderPosition.IsMouseCaptureWithin)
+                /sliderPosition.Value = mediaElement.Position.TotalSeconds;
+
+            if (mediaElement.Position.Seconds < 10)
+                second.Text = "0" + mediaElement.Position.Seconds.ToString();
+            else
+                second.Text = mediaElement.Position.Seconds.ToString();
+            if (mediaElement.Position.Minutes < 10)
+                minute.Text = "0" + mediaElement.Position.Minutes.ToString() + " :";
+            else
+                minute.Text = mediaElement.Position.Minutes.ToString() + " :";
+             * */
+        }
+
+        private void sliderPosition_LostMouseCapture(object sender, MouseEventArgs e)
+        {
+            //mediaElement.Position = TimeSpan.FromSeconds(sliderPosition.Value);
+        }
+
+        private void VoicePopupClick(object sender, RoutedEventArgs e)
+        {
+            voicePopup.IsOpen = true;
+        }
+
+        private void backBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //mediaElement.Position = mediaElement.Position - TimeSpan.FromSeconds(10);
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Playback_Slow(videoState);
+            }
+        }
+
+        private void forwardBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //mediaElement.Position = mediaElement.Position + TimeSpan.FromSeconds(10);
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Playback_Fast(videoState);
+            }
+        
+        }
+
+        private void stopBtn_Click(object sender, RoutedEventArgs e)
+        {
+            playBtn.Visibility = Visibility.Visible;
+            playBtn.IsEnabled = true;
+            pauseBtn.Visibility = Visibility.Collapsed;
+            pauseBtn.IsEnabled = false;
+            mediaBtn.Visibility = Visibility.Visible;
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Stop_PlayBack(videoState);
+                videoState = -2;
+            }
+            if (thread != null && thread.IsAlive)
+            {
+                thread.Abort();
+                thread = null;
+            }
+        }
+
+        private void nextBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (current >= 7)
+                current = 1;
+            else
+                current += 1;
+
+            //mediaElement.Source = new Uri(path + current.ToString() + tail);
+            //mediaElement.Pause();
+            playBtn.Visibility = Visibility.Visible;
+            pauseBtn.Visibility = Visibility.Collapsed;
+            mediaBtn.Visibility = Visibility.Visible;
+        }
+
+        private void eventClick(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                VideoPlayBackTimeStart = GetTimeStamp(Convert.ToDateTime(eventList[TrackListView.SelectedIndex].StartTime));
+                VideoPlayBackTimetEnd = GetTimeStamp(Convert.ToDateTime(eventList[TrackListView.SelectedIndex].EndTime));
+             
+            }
+            catch
+            {
+                return;
+            }
+
+        }
+
+        private void comfirmClick(object sender, RoutedEventArgs e)
+        {
+            if (TrackListView.SelectedItem != null)
+            {
+                start = VideoPlayBackTimeStart;
+                end = VideoPlayBackTimetEnd;
+            }
+            else
+            {
+                MessageBoxX.Show("提示", "尚未选择跟踪事件");
+            }
+        }
+
+        private void firstPageClick(object sender, RoutedEventArgs e)
+        {
+            if (sumpage == -1)
+            {
+                MessageBoxX.Show("提示", "还没有进行查询");
+                return;
+            }
+            if (trackVideoPlaybackcurrentPage == 1)
+            {
+                MessageBoxX.Show("提示", "已经到首页啦");
+                return;
+            }
+            //try
+            //{
+            //    //start = dataTime()[0];//开始时间
+            //    //end = dataTime()[1];//结束时间
+            //    //trackEventProvider = new TrackEventProvider(SelectTimeStart, SelectTimeEnd, 20);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBoxX.Show("提示", ex.Message);
+            //    return;
+            //}
+            eventList.Clear();
+            List<dataAnadll.TrackEvent> TrackEventResultList = new List<dataAnadll.TrackEvent>();
+            try
+            {
+                //trackEventProvider.GetPageNum(out sumpage);
+               trackEventProvider.GetPage(1, out TrackEventResultList);
+            }
+            catch (Exception ex)
+            {
+                MessageBoxX.Show("提示", ex.Message);
+                return;
+            }
+            trackVideoPlaybackcurrentPage = 1;
+            for (int i = 0; i < TrackEventResultList.Count; i++)
+            {
+                TrackingEvent te = new TrackingEvent
+                {
+                    ID = i,
+                    StartTime = TrackEventResultList[i].StartTime.ToString(),
+                    EndTime = TrackEventResultList[i].EndTime.ToString(),
+                    EventName = TrackEventResultList[i].Name.ToString(),
+                    EventType = eventTypeMap[TrackEventResultList[i].Type],
+                    Description = TrackEventResultList[i].Description,
+                };
+                eventList.Add(te);
+            }
+            TrackListView.DataContext = eventList;
+            currentPage.Text = trackVideoPlaybackcurrentPage.ToString();
+            totalPages.Text = sumpage.ToString();
+        }
+        /// <summary>
+        /// 上一页
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lastPageClick(object sender, RoutedEventArgs e)
+        {
+            if (sumpage == -1)
+            {
+                MessageBoxX.Show("提示", "还没有进行查询");
+                return;
+            }
+            if (trackVideoPlaybackcurrentPage == 1)
+            {
+                MessageBoxX.Show("提示", "已经到首页啦");
+                return;
+            }
+            //try
+            //{
+            //    //start = dataTime()[0];//开始时间
+            //    //end = dataTime()[1];//结束时间
+            //    //trackEventProvider = new TrackEventProvider(SelectTimeStart, SelectTimeEnd, 20);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBoxX.Show("提示", ex.Message);
+            //    return;
+            //}
+            eventList.Clear();
+            List<dataAnadll.TrackEvent> TrackEventResultList = new List<dataAnadll.TrackEvent>();
+            try
+            {
+                //trackEventProvider.GetPageNum(out sumpage);
+                trackEventProvider.GetPage(trackVideoPlaybackcurrentPage-1, out TrackEventResultList);
+            }
+            catch (Exception ex)
+            {
+                MessageBoxX.Show("提示", ex.Message);
+                return;
+            }
+            trackVideoPlaybackcurrentPage -=1;
+            for (int i = 0; i < TrackEventResultList.Count; i++)
+            {
+                TrackingEvent te = new TrackingEvent
+                {
+                    ID = i,
+                    StartTime = TrackEventResultList[i].StartTime.ToString(),
+                    EndTime = TrackEventResultList[i].EndTime.ToString(),
+                    EventName = TrackEventResultList[i].Name.ToString(),
+                    EventType = eventTypeMap[TrackEventResultList[i].Type],
+                    Description = TrackEventResultList[i].Description,
+                };
+                eventList.Add(te);
+            }
+            TrackListView.DataContext = eventList;
+            currentPage.Text = trackVideoPlaybackcurrentPage.ToString();
+            totalPages.Text = sumpage.ToString();
+        }
+        /// <summary>
+        /// 下一页
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void nextPageClick(object sender, RoutedEventArgs e)
+        {
+            if (sumpage == -1)
+            {
+                MessageBoxX.Show("提示", "还没有进行查询");
+                return;
+            }
+            if (trackVideoPlaybackcurrentPage == sumpage)
+            {
+                MessageBoxX.Show("提示", "已经到尾页啦");
+                return;
+            }
+            //try
+            //{
+            //    start = dataTime()[0];//开始时间
+            //    end = dataTime()[1];//结束时间
+            //    trackEventProvider = new TrackEventProvider(SelectTimeStart, SelectTimeEnd, 20);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBoxX.Show("提示", ex.Message);
+            //    return;
+            //}
+            eventList.Clear();
+            List<dataAnadll.TrackEvent> TrackEventResultList = new List<dataAnadll.TrackEvent>();
+            try
+            {
+                //trackEventProvider.GetPageNum(out sumpage);
+                trackEventProvider.GetPage(trackVideoPlaybackcurrentPage+1, out TrackEventResultList);
+            }
+            catch (Exception ex)
+            {
+                MessageBoxX.Show("提示", ex.Message);
+                return;
+            }
+            trackVideoPlaybackcurrentPage +=1;
+            for (int i = 0; i < TrackEventResultList.Count; i++)
+            {
+                TrackingEvent te = new TrackingEvent
+                {
+                    ID = i,
+                    StartTime = TrackEventResultList[i].StartTime.ToString(),
+                    EndTime = TrackEventResultList[i].EndTime.ToString(),
+                    EventName = TrackEventResultList[i].Name.ToString(),
+                    EventType = eventTypeMap[TrackEventResultList[i].Type],
+                    Description = TrackEventResultList[i].Description,
+                };
+                eventList.Add(te);
+            }
+            TrackListView.DataContext = eventList;
+            totalPages.Text = sumpage.ToString();
+            currentPage.Text = trackVideoPlaybackcurrentPage.ToString();
+        }
+        /// <summary>
+        /// 尾页
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void endPageClick(object sender, RoutedEventArgs e)
+        {
+            if (sumpage == -1)
+            {
+                MessageBoxX.Show("提示", "还没有进行查询");
+                return;
+            }
+            if (trackVideoPlaybackcurrentPage == sumpage)
+            {
+                MessageBoxX.Show("提示", "已经到尾页啦");
+                return;
+            }
+            //try
+            //{
+            //    start = dataTime()[0];//开始时间
+            //    end = dataTime()[1];//结束时间
+            //    trackEventProvider = new TrackEventProvider(SelectTimeStart, SelectTimeEnd, 20);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBoxX.Show("提示", ex.Message);
+            //    return;
+            //}
+            eventList.Clear();
+            List<dataAnadll.TrackEvent> TrackEventResultList = new List<dataAnadll.TrackEvent>();
+            try
+            {
+                //trackEventProvider.GetPageNum(out sumpage);
+                trackEventProvider.GetPage(sumpage, out TrackEventResultList);
+            }
+            catch (Exception ex)
+            {
+                MessageBoxX.Show("提示", ex.Message);
+                return;
+            }
+            trackVideoPlaybackcurrentPage = sumpage;
+            for (int i = 0; i < TrackEventResultList.Count; i++)
+            {
+                TrackingEvent te = new TrackingEvent
+                {
+                    ID = i,
+                    StartTime = TrackEventResultList[i].StartTime.ToString(),
+                    EndTime = TrackEventResultList[i].EndTime.ToString(),
+                    EventName = TrackEventResultList[i].Name.ToString(),
+                    EventType = eventTypeMap[TrackEventResultList[i].Type],
+                    Description = TrackEventResultList[i].Description,
+                };
+                eventList.Add(te);
+            }
+            TrackListView.DataContext = eventList;
+            currentPage.Text = trackVideoPlaybackcurrentPage.ToString();
+            totalPages.Text = sumpage.ToString();
+        }
+        /// <summary>
+        /// 跳转
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void changeToPageClick(object sender, RoutedEventArgs e)
+        {
+            int ChangeToPage;
+            try
+            {
+                ChangeToPage = Convert.ToInt32(pageNumber.Text.Trim());
+            }
+            catch
+            {
+                MessageBoxX.Show("提示","跳转的页码不合法");
+                pageNumber.Text = trackVideoPlaybackcurrentPage.ToString();
+                return;
+            }
+            if (sumpage < ChangeToPage || ChangeToPage < 0)
+            {
+                MessageBoxX.Show("提示", "跳转的页码不合法");
+                pageNumber.Text = trackVideoPlaybackcurrentPage.ToString();
+                return;
+            }
+            if (sumpage == -1)
+            {
+                MessageBoxX.Show("提示", "还没有进行查询");
+                return;
+            }
+            //try
+            //{
+            //    start = dataTime()[0];//开始时间
+            //    end = dataTime()[1];//结束时间
+            //    trackEventProvider = new TrackEventProvider(SelectTimeStart, SelectTimeEnd, 20);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBoxX.Show("提示", ex.Message);
+            //    return;
+            //}
+            eventList.Clear();
+            List<dataAnadll.TrackEvent> TrackEventResultList = new List<dataAnadll.TrackEvent>();
+            try
+            {
+                //trackEventProvider.GetPageNum(out sumpage);
+                trackEventProvider.GetPage(ChangeToPage, out TrackEventResultList);
+            }
+            catch (Exception ex)
+            {
+                MessageBoxX.Show("提示", ex.Message);
+                return;
+            }
+            trackVideoPlaybackcurrentPage = ChangeToPage;
+            for (int i = 0; i < TrackEventResultList.Count; i++)
+            {
+                TrackingEvent te = new TrackingEvent
+                {
+                    ID = i,
+                    StartTime = TrackEventResultList[i].StartTime.ToString(),
+                    EndTime = TrackEventResultList[i].EndTime.ToString(),
+                    EventName = TrackEventResultList[i].Name.ToString(),
+                    EventType = eventTypeMap[TrackEventResultList[i].Type],
+                    Description = TrackEventResultList[i].Description,
+                };
+                eventList.Add(te);
+            }
+            TrackListView.DataContext = eventList;
+            currentPage.Text = trackVideoPlaybackcurrentPage.ToString();
+            totalPages.Text = sumpage.ToString();
+        }
+
+        private void pauseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Playback_Pause(videoState);
+                playBtn.IsEnabled = true;
+                playBtn.Visibility = Visibility.Visible;
+                pauseBtn.IsEnabled = false;
+                pauseBtn.Visibility = Visibility.Collapsed;
+                pause = 1;
+            }
+        }
+        private int pauseState=0;
+
+        private void nextFrameBtn_Click(object sender, RoutedEventArgs e)
+            //单帧播放
+        {
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Playback_Frame(videoState);
+                playBtn.IsEnabled = true;
+                playBtn.Visibility = Visibility.Visible;
+                pauseBtn.IsEnabled = false;
+                pauseBtn.Visibility = Visibility.Collapsed;
+                pause = 2;
+            }
+        }
+    }
+
+    class TrackPageNumber
+    {
+        public string number { get; set; }
+    }
+}

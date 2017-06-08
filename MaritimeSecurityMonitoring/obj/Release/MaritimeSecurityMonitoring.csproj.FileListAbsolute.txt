@@ -1,0 +1,1392 @@
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\followVideo.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\monitoringIn.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\MapManage.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\QueryTrack.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShowBoat.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\style\MediaButtonStyle.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\style\MediaSliderStyle.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\TrackEvent.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\App.baml
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\followVideo.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\monitoringIn.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Net_Add.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Role_Add.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\User_Add.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\White_Add.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\MainWindow.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\MonitoringX.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\CaptureImages.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\DataExport.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\DataStatistics.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\MapManage.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\DataQuery.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\QueryTrack.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\RoleManagement.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShowBoat.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\TrackEvent.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\UserManagement.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\App.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.cache
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.lref
+C:\Users\28330\Desktop\5.2晚\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\followVideo.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MapManage.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\style\MediaButtonStyle.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\style\MediaSliderStyle.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\App.baml
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\followVideo.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Net_Add.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Role_Add.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\User_Add.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\White_Add.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MainWindow.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringX.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\CaptureImages.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataExport.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataStatistics.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MapManage.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataQuery.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\RoleManagement.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\UserManagement.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\App.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.cache
+C:\Users\Lenovo\Desktop\5-11base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.lref
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\followVideo.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MapManage.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\style\MediaButtonStyle.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\style\MediaSliderStyle.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\App.baml
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\followVideo.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Net_Add.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Role_Add.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\User_Add.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\White_Add.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MainWindow.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringX.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\CaptureImages.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataExport.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataStatistics.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MapManage.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataQuery.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\RoleManagement.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\UserManagement.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\App.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.cache
+C:\Users\Lenovo\Desktop\5-17.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.lref
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.pdb
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\AxInterop.YIMAENCLib.dll
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\dataAnadll.dll
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\GetProcess.dll
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\mysql.data.dll
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\NVRCsharpDemo.dll
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\PhotoelectricModule.dll
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\Ship_Recongnize.dll
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\Xceed.Wpf.Toolkit.dll
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\YimaWF.dll
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\dataAnadll.pdb
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\bin\Release\PhotoelectricModule.pdb
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\followVideo.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MapManage.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\style\MediaButtonStyle.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\style\MediaSliderStyle.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\App.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\followVideo.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Net_Add.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Role_Add.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\User_Add.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\White_Add.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MainWindow.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringX.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\CaptureImages.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataExport.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataStatistics.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MapManage.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataQuery.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\RoleManagement.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\UserManagement.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\App.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.cache
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.lref
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Net_Add.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\Role_Add.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\User_Add.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\White_Add.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MainWindow.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MonitoringX.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\CaptureImages.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataExport.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataStatistics.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\DataQuery.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\RoleManagement.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\style\CommonStyle.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\UserManagement.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.baml
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.g.resources
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csproj.GenerateResource.Cache
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.exe
+C:\Users\Lenovo\Desktop\5-18.base.厂外调试版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.pdb
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.exe
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.pdb
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.pdb
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\AxInterop.YIMAENCLib.dll
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\dataAnadll.dll
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\GetProcess.dll
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\mysql.data.dll
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\NVRCsharpDemo.dll
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\PhotoelectricModule.dll
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\Ship_Recongnize.dll
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\Xceed.Wpf.Toolkit.dll
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\YimaWF.dll
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\followVideo.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\monitoringIn.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MapManage.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\QueryTrack.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShowBoat.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\style\MediaButtonStyle.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\style\MediaSliderStyle.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TrackEvent.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\App.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\followVideo.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\monitoringIn.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Net_Add.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Role_Add.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\User_Add.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\White_Add.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MainWindow.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MonitoringX.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\CaptureImages.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DataExport.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DataStatistics.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MapManage.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DataQuery.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\QueryTrack.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\RoleManagement.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShowBoat.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TrackEvent.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\UserManagement.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\App.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.cache
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.lref
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Net_Add.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\Role_Add.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\User_Add.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\White_Add.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MainWindow.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MonitoringX.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\CaptureImages.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DataExport.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DataStatistics.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\DataQuery.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\RoleManagement.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\style\CommonStyle.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\UserManagement.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.baml
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.g.resources
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\5-27 00.34\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csproj.GenerateResource.Cache
+C:\Users\xrxy\Desktop\5-28稳定版(指示灯为设备联网状态)\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+C:\Users\xrxy\Desktop\5-28稳定版(指示灯为设备联网状态)\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.exe
+C:\Users\xrxy\Desktop\5-28稳定版(指示灯为设备联网状态)\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.pdb
+C:\Users\anton\Desktop\5-28稳定版(指示灯为设备联网状态)\5-24\5-23晚\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+C:\Users\anton\Desktop\5-28稳定版(指示灯为设备联网状态)\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.exe
+C:\Users\anton\Desktop\5-28稳定版(指示灯为设备联网状态)\5-24\5-23晚\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.pdb
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.exe
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.pdb
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.pdb
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\bin\Release\AxInterop.YIMAENCLib.dll
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\bin\Release\dataAnadll.dll
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\bin\Release\GetProcess.dll
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\bin\Release\mysql.data.dll
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\bin\Release\NVRCsharpDemo.dll
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\bin\Release\PhotoelectricModule.dll
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\bin\Release\Ship_Recongnize.dll
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\bin\Release\Xceed.Wpf.Toolkit.dll
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\bin\Release\YimaWF.dll
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\followVideo.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\monitoringIn.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MapManage.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\QueryTrack.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShowBoat.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\style\MediaButtonStyle.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\style\MediaSliderStyle.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TrackEvent.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\App.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\followVideo.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\monitoringIn.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Net_Add.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Role_Add.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\User_Add.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\White_Add.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MainWindow.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MonitoringX.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\CaptureImages.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DataExport.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DataStatistics.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MapManage.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DataQuery.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\QueryTrack.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\RoleManagement.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShowBoat.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TrackEvent.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\UserManagement.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\App.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.cache
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.lref
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Net_Add.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\Role_Add.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\User_Add.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\White_Add.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MainWindow.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MonitoringX.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\CaptureImages.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DataExport.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DataStatistics.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\DataQuery.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\RoleManagement.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\style\CommonStyle.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\UserManagement.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.baml
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.g.resources
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\6-2\6-2\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csproj.GenerateResource.Cache
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.exe
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.pdb
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.pdb
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\AxInterop.YIMAENCLib.dll
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\dataAnadll.dll
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\GetProcess.dll
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\mysql.data.dll
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\NVRCsharpDemo.dll
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\PhotoelectricModule.dll
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\Ship_Recongnize.dll
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\Xceed.Wpf.Toolkit.dll
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\YimaWF.dll
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\bin\Release\dataAnadll.pdb
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csprojResolveAssemblyReference.cache
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\followVideo.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MapManage.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\style\MediaButtonStyle.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\style\MediaSliderStyle.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\App.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\followVideo.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Net_Add.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Role_Add.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\User_Add.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\White_Add.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MainWindow.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringX.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\CaptureImages.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DataExport.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DataStatistics.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MapManage.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuery.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\RoleManagement.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\UserManagement.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\App.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.cache
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.lref
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Net_Add.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\Role_Add.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\User_Add.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\White_Add.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MainWindow.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringX.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\CaptureImages.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DataExport.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DataStatistics.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuery.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\RoleManagement.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\style\CommonStyle.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\UserManagement.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.baml
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.g.resources
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.Properties.Resources.resources
+D:\DataAna\2017年6月5日-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csproj.GenerateResource.Cache
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.pdb
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\AxInterop.YIMAENCLib.dll
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\dataAnadll.dll
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\GetProcess.dll
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\mysql.data.dll
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\NVRCsharpDemo.dll
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\PhotoelectricModule.dll
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\Ship_Recongnize.dll
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\Xceed.Wpf.Toolkit.dll
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\YimaWF.dll
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\bin\Release\dataAnadll.pdb
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csprojResolveAssemblyReference.cache
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\followVideo.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MapManage.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\style\MediaButtonStyle.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\style\MediaSliderStyle.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\App.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\followVideo.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Net_Add.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Role_Add.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\User_Add.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\White_Add.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MainWindow.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringX.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\CaptureImages.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DataExport.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DataStatistics.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MapManage.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuery.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\RoleManagement.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\UserManagement.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\App.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.cache
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.lref
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Net_Add.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\Role_Add.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\User_Add.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\White_Add.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MainWindow.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringX.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\CaptureImages.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DataExport.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DataStatistics.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuery.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\RoleManagement.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\style\CommonStyle.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\UserManagement.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.baml
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.g.resources
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.Properties.Resources.resources
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csproj.GenerateResource.Cache
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.exe
+D:\DataAna\2017年6月5日下午-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.pdb
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.pdb
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\bin\Release\AxInterop.YIMAENCLib.dll
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\bin\Release\GetProcess.dll
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\bin\Release\mysql.data.dll
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\bin\Release\NVRCsharpDemo.dll
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\bin\Release\Ship_Recongnize.dll
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\bin\Release\Xceed.Wpf.Toolkit.dll
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csprojResolveAssemblyReference.cache
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\followVideo.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MapManage.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\style\MediaButtonStyle.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\style\MediaSliderStyle.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\App.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\followVideo.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\monitoringIn.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Net_Add.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Role_Add.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\User_Add.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\White_Add.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MainWindow.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringX.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\CaptureImages.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DataExport.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DataStatistics.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MapManage.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuery.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\QueryTrack.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\RoleManagement.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowBoat.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackEvent.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\UserManagement.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\App.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.cache
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.lref
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Net_Add.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\Role_Add.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\User_Add.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\White_Add.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MainWindow.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MonitoringX.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\CaptureImages.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DataExport.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DataStatistics.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\DataQuery.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\RoleManagement.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\style\CommonStyle.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\UserManagement.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.baml
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.g.resources
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.Properties.Resources.resources
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csproj.GenerateResource.Cache
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.exe
+D:\DataAna\2017年6月5日傍晚-稳定版\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.pdb
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.exe.config
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.exe
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.pdb
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\bin\Release\MaritimeSecurityMonitoring.pdb
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\bin\Release\AxInterop.YIMAENCLib.dll
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\bin\Release\GetProcess.dll
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\bin\Release\mysql.data.dll
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\bin\Release\NVRCsharpDemo.dll
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\bin\Release\Ship_Recongnize.dll
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\bin\Release\Xceed.Wpf.Toolkit.dll
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csprojResolveAssemblyReference.cache
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\followVideo.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\monitoringIn.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MapManage.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\QueryTrack.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShowBoat.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\style\MediaButtonStyle.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\style\MediaSliderStyle.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TrackEvent.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\App.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Content\IconButton.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DoubleScreen.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\followVideo.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\monitoringIn.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MonitoringInterface.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Net_Add.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\DatabaseServerPage.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Role_Add.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\User_Add.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\White_Add.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Windows\ConfirmBox.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Windows\MapMessage.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Windows\MessageBoxX.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MainWindow.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MonitoringX.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringSecondPage.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\MonitoringFirstPage.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\MixServerPage.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\OptoelectronicPage.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\AISPage.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\AutomaticLinkage.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\CaptureImages.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DataExport.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DataStatistics.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DeviceOperationStatus.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\GorgeParameterSetting.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MapManage.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Page\RadarFirstPage.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\PolygonDialog.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DataQuery.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\QueryTrack.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\RoleManagement.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShipNumberImport.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShowAISTargetProperty.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShowBoat.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShowMixTargetProperty.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShowRadarTargetProperty.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ShowTargetProperty.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\SituationPlayback.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TargetDisplayMethods.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TrackAlgorithmSelection.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TrackEvent.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TrackVideoSelection.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\UserManagement.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\WarnAreaSetting.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Windows\WinProgressBar.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\App.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.cache
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring_MarkupCompile.lref
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Content\DeviceIcon.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Content\KeyBoard.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Content\NetLine.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DataQuetycs\DateTimePicker.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DefenseCircleSetting.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\FullNetStatus.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\LinkageEventQuery.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Net_Add.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\Role_Add.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\User_Add.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\White_Add.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MainWindow.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MonitoringReturn.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MonitoringX.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\NetParameterSetting.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\CaptureImages.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DataExport.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DataStatistics.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\FusionParameterSetting.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\PhotoelectricMaintenance.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\PipelineDialog.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\PlatformPositionSetting.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\DataQuery.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\RoleManagement.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\ScanParameterSetting.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\style\CommonStyle.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TargetWakeSetting.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\TrackVideoPlayback.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\UserManagement.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\SetMeasuringScale.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\WhiteListSetting.baml
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.g.resources
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.Properties.Resources.resources
+D:\DataAna\2017年6月6日上午\MaritimeSecurityMonitoring\obj\Release\MaritimeSecurityMonitoring.csproj.GenerateResource.Cache

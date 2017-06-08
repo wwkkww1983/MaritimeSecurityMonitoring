@@ -1,0 +1,299 @@
+﻿<Window x:Class="MaritimeSecurityMonitoring.PhotoelectricMaintenance"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:m="clr-namespace:MaritimeSecurityMonitoring"
+        Title="光电维护" Width="600" MaxWidth="600" MinWidth="600" Height="550" MaxHeight="550" MinHeight="550"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize" MouseLeftButtonDown="dragMoveWindow">
+    <Window.Resources>
+        <ControlTemplate x:Key="CornerLabel" TargetType="{x:Type Label}">
+            <Border BorderThickness="0" CornerRadius="8,8,0,0" Background="#FF4A79D8">
+                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="CornerButton" TargetType="{x:Type Button}">
+            <Border x:Name="bd" BorderThickness="0" CornerRadius="5 5 5 5" Background="#FF4A79D8">
+                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF6D9DFF"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF005AE2"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="UpTriButton" TargetType="{x:Type Button}">
+            <Grid>
+                <Polygon x:Name="ButtonPolygon" Stretch="Fill" Points="0,10 5,0 10,10">
+                    <Polygon.Fill>
+                        <SolidColorBrush Color="#FF4A79D8"/>
+                    </Polygon.Fill>
+                </Polygon>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ButtonPolygon" Property="Fill" Value="Gray"></Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="ButtonPolygon" Property="Fill" Value="Black"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="BottomTriButton" TargetType="{x:Type Button}">
+            <Grid>
+                <Polygon x:Name="ButtonPolygon" Stretch="Fill" Points="0,0 10,0 5,10">
+                    <Polygon.Fill>
+                        <SolidColorBrush Color="#FF4A79D8"/>
+                    </Polygon.Fill>
+                </Polygon>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ButtonPolygon" Property="Fill" Value="Gray"></Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="ButtonPolygon" Property="Fill" Value="Black"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <Style x:Key="TextBoxErrorTemp" TargetType="{x:Type TextBox}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="Validation.ErrorTemplate">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <DockPanel LastChildFill="True">
+                                    <TextBlock DockPanel.Dock="Bottom" Foreground="Red" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Text="{Binding ElementName=MyAdorner, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                                    </TextBlock>
+                                    <Border BorderBrush="Red" BorderThickness="2" Width="94">
+                                        <AdornedElementPlaceholder Name="MyAdorner"/>
+                                    </Border>
+                                </DockPanel>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <RoutedUICommand x:Key="Cancel"/>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Key="Esc" Command="{StaticResource Cancel}"/>
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource Cancel}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed"/>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Template="{StaticResource CornerLabel}" FontSize="20" Foreground="White">光电维护</Label>
+        <Button Height="22" Width="22" Margin="0 0 10 0" HorizontalAlignment="Right" BorderThickness="0" Click="closeWindowClick">
+            <Image Source="Image/Close_new.png"/>
+            <Button.Background>
+                <SolidColorBrush Color="#FF4A79D8"/>
+            </Button.Background>
+        </Button>
+
+        <Border Grid.Row="1" BorderThickness="0" Background="White" CornerRadius="0 0 8 8">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.7*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0" Template="{StaticResource CornerButton}" Height="38" Width="160" FontSize="20" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="50 0 0 -12" Click="restartClick">重启手动摇杆</Button>
+
+                <Border Grid.Row="1" BorderThickness="1" BorderBrush="Gray" CornerRadius="8" Margin="50 45 50 0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.55*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.6*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center">方位</TextBlock>
+                        <Border Grid.Column="2" BorderThickness="1" BorderBrush="Gray" CornerRadius="2" VerticalAlignment="Center" Margin="15 0 0 0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBox Grid.Column="0" x:Name="Azimuth1" Style="{StaticResource TextBoxErrorTemp}" FontSize="20" BorderThickness="0" Background="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                    <TextBox.Text>
+                                        <Binding Path="azimuth1" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                                            <Binding.ValidationRules>
+                                                <m:NumberValidationRuleForInt x:Name="rule1" Min="-200" Max="200"></m:NumberValidationRuleForInt>
+                                            </Binding.ValidationRules>
+                                        </Binding>
+                                    </TextBox.Text>
+                                </TextBox>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Button Grid.Row="0" Template="{StaticResource UpTriButton}" Height="8" Margin="2 1" Tag="Azimuth1" Click="AddClick"/>
+                                    <Button Grid.Row="1" Template="{StaticResource BottomTriButton}" Height="8" Margin="2 1" Tag="Azimuth1" Click="MinusClick"/>
+                                </Grid>
+                            </Grid>
+                        </Border>
+
+                        <TextBlock Grid.Column="3" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="80 0 0 0">俯仰</TextBlock>
+                        <Border Grid.Column="4" BorderThickness="1" BorderBrush="Gray" CornerRadius="2" VerticalAlignment="Center" Margin="15 0 0 0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBox Grid.Column="0" x:Name="Pitch1" Style="{StaticResource TextBoxErrorTemp}" FontSize="20" BorderThickness="0" Background="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                    <TextBox.Text>
+                                        <Binding Path="pitch1" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                                            <Binding.ValidationRules>
+                                                <m:NumberValidationRuleForInt x:Name="rule2" Min="-200" Max="200"></m:NumberValidationRuleForInt>
+                                            </Binding.ValidationRules>
+                                        </Binding>
+                                    </TextBox.Text>
+                                </TextBox>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Button Grid.Row="0" Template="{StaticResource UpTriButton}" Height="8" Margin="2 1" Tag="Pitch1" Click="AddClick"/>
+                                    <Button Grid.Row="1" Template="{StaticResource BottomTriButton}" Height="8" Margin="2 1" Tag="Pitch1" Click="MinusClick"/>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+                <TextBlock Grid.Row="1" Background="White" Foreground="#FF4A79D8" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62 33 0 0">陀螺漂移补偿</TextBlock>
+
+                <Border Grid.Row="2" BorderThickness="1" BorderBrush="Gray" CornerRadius="8" Margin="50 30 50 15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.55*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.6*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center">方位</TextBlock>
+                        <Border Grid.Column="2" BorderThickness="1" BorderBrush="Gray" CornerRadius="2" VerticalAlignment="Center" Margin="15 0 0 0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBox Grid.Column="0" x:Name="Azimuth2" Style="{StaticResource TextBoxErrorTemp}" FontSize="20" BorderThickness="0" Background="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                    <TextBox.Text>
+                                        <Binding Path="azimuth2" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                                            <Binding.ValidationRules>
+                                                <m:NumberValidationRuleForInt x:Name="rule3" Min="-200" Max="200"></m:NumberValidationRuleForInt>
+                                            </Binding.ValidationRules>
+                                        </Binding>
+                                    </TextBox.Text>
+                                </TextBox>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Button Grid.Row="0" Template="{StaticResource UpTriButton}" Height="8" Margin="2 1" Tag="Azimuth2" Click="AddClick"/>
+                                    <Button Grid.Row="1" Template="{StaticResource BottomTriButton}" Height="8" Margin="2 1" Tag="Azimuth2" Click="MinusClick"/>
+                                </Grid>
+                            </Grid>
+                        </Border>
+
+                        <TextBlock Grid.Column="3" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="80 0 0 0">俯仰</TextBlock>
+                        <Border Grid.Column="4" BorderThickness="1" BorderBrush="Gray" CornerRadius="2" VerticalAlignment="Center" Margin="15 0 0 0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBox Grid.Column="0" x:Name="Pitch2" Style="{StaticResource TextBoxErrorTemp}" FontSize="20" BorderThickness="0" Background="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                    <TextBox.Text>
+                                        <Binding Path="pitch2" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                                            <Binding.ValidationRules>
+                                                <m:NumberValidationRuleForInt x:Name="rule4" Min="-200" Max="200"></m:NumberValidationRuleForInt>
+                                            </Binding.ValidationRules>
+                                        </Binding>
+                                    </TextBox.Text>
+                                </TextBox>
+                                <Grid Grid.Column="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Button Grid.Row="0" Template="{StaticResource UpTriButton}" Height="8" Margin="2 1" Tag="Pitch2" Click="AddClick"/>
+                                    <Button Grid.Row="1" Template="{StaticResource BottomTriButton}" Height="8" Margin="2 1" Tag="Pitch2" Click="MinusClick"/>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+                <TextBlock Grid.Row="2" Background="White" Foreground="#FF4A79D8" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62 18 0 0">驱动漂移补偿</TextBlock>
+
+                <Border Grid.Row="3" BorderThickness="1" BorderBrush="Gray" CornerRadius="8" Margin="50 15 50 30">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="0.62*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center">高度</TextBlock>
+                        <Border Grid.Column="2" BorderThickness="1" BorderBrush="Gray" CornerRadius="2" VerticalAlignment="Center" Margin="15 0 0 0">
+                            <TextBox x:Name="Height" Style="{StaticResource TextBoxErrorTemp}" FontSize="20" BorderThickness="0" Background="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                <TextBox.Text>
+                                    <Binding Path="height" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                                        <Binding.ValidationRules>
+                                            <m:NumberValidationRuleForFloat x:Name="rule5" Min="0" Max="100"></m:NumberValidationRuleForFloat>
+                                        </Binding.ValidationRules>
+                                    </Binding>
+                                </TextBox.Text>
+                            </TextBox>
+                        </Border>
+                    </Grid>
+                </Border>
+                <TextBlock Grid.Row="3" Background="White" Foreground="#FF4A79D8" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62 3 0 0">光电架设高度</TextBlock>
+                
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="1" Template="{StaticResource CornerButton}" Height="38" Width="100" FontSize="20" Foreground="White" VerticalAlignment="Top" Margin="0 -3 90 0" Click="comfirmClick">确定</Button>
+                    <Button Grid.Column="2" Template="{StaticResource CornerButton}" Height="38" Width="100" FontSize="20" Foreground="White" VerticalAlignment="Top" Margin="0 -3 0 0" Click="cancelClick">取消</Button>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

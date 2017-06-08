@@ -1,0 +1,17 @@
+﻿<Window x:Class="MaritimeSecurityMonitoring.PictureShow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaritimeSecurityMonitoring"
+        mc:Ignorable="d"
+        Title="PictureShow" WindowStyle="None" AllowsTransparency="True" Background="Transparent" MouseLeftButtonDown="dragMoveWindow">
+    <Viewbox>
+        <Grid>
+            <Image x:Name="image" Source="Image/CapturePicture.png"/>
+            <Button Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Top" BorderThickness="0" Background="Transparent" Click="closeWindowClick">
+                <Polygon Stretch="Fill" Fill="Black" Points="0,0.5 0.5,0 5,4.5 9.5,0 10,0.5 5.5,5 10,9.5 9.5,10 5,5.5 0.5,10 0,9.5 4.5,5"/>
+            </Button>
+        </Grid>
+    </Viewbox>
+</Window>

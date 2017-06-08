@@ -1,0 +1,219 @@
+﻿<Window x:Class="MaritimeSecurityMonitoring.ScanParameterSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:m="clr-namespace:MaritimeSecurityMonitoring"
+        Title="扫描参数设置" Width="600" MinWidth="600" MaxWidth="600" Height="360" MinHeight="360" MaxHeight="360"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize" MouseLeftButtonDown="dragMoveWindow">
+    <Window.Resources>
+        <ControlTemplate x:Key="CornerLabel" TargetType="{x:Type Label}">
+            <Border BorderThickness="0" CornerRadius="8,8,0,0" Background="#FF4A79D8">
+                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="CornerButton" TargetType="{x:Type Button}">
+            <Border x:Name="bd" BorderThickness="0" CornerRadius="5 5 5 5" Background="#FF4A79D8">
+                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF6D9DFF"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF005AE2"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        
+        <ControlTemplate x:Key="UpTriButton" TargetType="{x:Type Button}">
+            <Grid>
+                <Polygon x:Name="ButtonPolygon" Stretch="Fill" Points="0,10 5,0 10,10">
+                    <Polygon.Fill>
+                        <SolidColorBrush Color="#FF4A79D8"/>
+                    </Polygon.Fill>
+                </Polygon>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ButtonPolygon" Property="Fill" Value="Gray"></Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="ButtonPolygon" Property="Fill" Value="Black"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="BottomTriButton" TargetType="{x:Type Button}">
+            <Grid>
+                <Polygon x:Name="ButtonPolygon" Stretch="Fill" Points="0,0 10,0 5,10">
+                    <Polygon.Fill>
+                        <SolidColorBrush Color="#FF4A79D8"/>
+                    </Polygon.Fill>
+                </Polygon>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ButtonPolygon" Property="Fill" Value="Gray"></Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="ButtonPolygon" Property="Fill" Value="Black"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <Style x:Key="TextBoxErrorTemp" TargetType="{x:Type TextBox}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="Validation.ErrorTemplate">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <DockPanel LastChildFill="True">
+                                    <TextBlock DockPanel.Dock="Bottom" Foreground="Red" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Text="{Binding ElementName=MyAdorner, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                                    </TextBlock>
+                                    <Border BorderBrush="Red" BorderThickness="2" Width="78">
+                                        <AdornedElementPlaceholder Name="MyAdorner"/>
+                                    </Border>
+                                </DockPanel>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Template="{StaticResource CornerLabel}" FontSize="20" Foreground="White">扫描参数设置</Label>
+        <Button Height="22" Width="22" Margin="0 0 10 0" HorizontalAlignment="Right" BorderThickness="0" Click="closeWindowClick">
+            <Image Source="Image/Close_new.png"/>
+            <Button.Background>
+                <SolidColorBrush Color="#FF4A79D8"/>
+            </Button.Background>
+        </Button>
+
+        <Border Grid.Row="1" BorderThickness="0" Background="White" CornerRadius="0 0 8 8">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3.8*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" BorderThickness="1" BorderBrush="Gray" CornerRadius="8" Margin="45 40 45 30">
+                    <Grid Margin="0 25 0 25">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <WrapPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="35 0 0 0">
+                            <TextBlock FontSize="20">两个扫描边界角度</TextBlock>
+                            <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="2" Margin="5 0 5 0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBox Grid.Column="0" x:Name="Angle1" Style="{StaticResource TextBoxErrorTemp}" Width="60" FontSize="20" BorderThickness="0" Background="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                        <TextBox.Text>
+                                            <Binding Path="angle1" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                                                <Binding.ValidationRules>
+                                                    <m:NumberValidationRuleForInt Min="0" Max="180"></m:NumberValidationRuleForInt>
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </TextBox.Text>
+                                    </TextBox>
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Button Grid.Row="0" Template="{StaticResource UpTriButton}" Height="8" Margin="2 1" Tag="Angle1" Click="AddClick"/>
+                                        <Button Grid.Row="1" Template="{StaticResource BottomTriButton}" Height="8" Margin="2 1" Tag="Angle1" Click="MinusClick"/>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                            <TextBlock FontSize="20">度，</TextBlock>
+                            <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="2" Margin="0 0 5 0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBox Grid.Column="0" x:Name="Angle2" Style="{StaticResource TextBoxErrorTemp}" Width="60" FontSize="20" BorderThickness="0" Background="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                        <TextBox.Text>
+                                            <Binding Path="angle2" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                                                <Binding.ValidationRules>
+                                                    <m:NumberValidationRuleForInt Min="0" Max="180"></m:NumberValidationRuleForInt>
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </TextBox.Text>
+                                    </TextBox>
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Button Grid.Row="0" Template="{StaticResource UpTriButton}" Height="8" Margin="2 1" Tag="Angle2" Click="AddClick"/>
+                                        <Button Grid.Row="1" Template="{StaticResource BottomTriButton}" Height="8" Margin="2 1" Tag="Angle2" Click="MinusClick"/>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                            <TextBlock FontSize="20">度</TextBlock>
+                        </WrapPanel>
+                        
+                        <WrapPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="35 0 0 0">
+                            <TextBlock FontSize="20">扫描速度相当于摇杆操作时最大速度的</TextBlock>
+                            <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="2" Margin="5 0 5 0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBox Grid.Column="0" x:Name="Percent" Style="{StaticResource TextBoxErrorTemp}" Width="60" FontSize="20" BorderThickness="0" Background="Transparent" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                                        <TextBox.Text>
+                                            <Binding Path="percent" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                                                <Binding.ValidationRules>
+                                                    <m:NumberValidationRuleForInt Min="20" Max="100"></m:NumberValidationRuleForInt>
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </TextBox.Text>
+                                    </TextBox>
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Button Grid.Row="0" Template="{StaticResource UpTriButton}" Height="8" Margin="2 1" Tag="Percent" Click="AddClick"/>
+                                        <Button Grid.Row="1" Template="{StaticResource BottomTriButton}" Height="8" Margin="2 1" Tag="Percent" Click="MinusClick"/>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                            <TextBlock FontSize="20">%</TextBlock>
+                        </WrapPanel>
+                    </Grid>
+                </Border>
+                <TextBlock Grid.Row="0" FontSize="20" Foreground="#FF4A79D8" Background="White" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="62,28,0,0">方位扫描</TextBlock>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="1" Template="{StaticResource CornerButton}" Height="35" Width="100" FontSize="20" Foreground="White" VerticalAlignment="Top" Margin="0 0 80 0" Click="comfirmClick">确定</Button>
+                    <Button Grid.Column="2" Template="{StaticResource CornerButton}" Height="35" Width="100" FontSize="20" Foreground="White" VerticalAlignment="Top" Click="cancelClick">取消</Button>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

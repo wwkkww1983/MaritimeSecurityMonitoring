@@ -1,0 +1,158 @@
+﻿<Page x:Class="MaritimeSecurityMonitoring.MixServerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="545" d:DesignWidth="1100"
+	  Title="MixServerPage" Background="Transparent">
+
+    <Grid Margin="200 30 200 40">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.2*"/>
+            <ColumnDefinition Width="1.2*"/>
+        </Grid.ColumnDefinitions>
+        
+        <GroupBox Grid.Column="0" Grid.RowSpan="2" Style="{StaticResource CommonGroupBox}" Header="基本信息" Margin="0 0 20 0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                
+                <WrapPanel Grid.Row="1" VerticalAlignment="Center" Margin="70 0 0 0">
+                    <TextBlock FontSize="16">IP地址：</TextBlock>
+                    <TextBlock FontSize="16">192.6.1.102</TextBlock>
+                </WrapPanel>
+                <WrapPanel Grid.Row="2" VerticalAlignment="Center" Margin="70 0 0 0">
+                    <TextBlock FontSize="16">系统厂商：</TextBlock>
+                    <TextBlock FontSize="16">Unbuntu </TextBlock>
+                </WrapPanel>
+                <WrapPanel Grid.Row="3" VerticalAlignment="Center" Margin="70 0 0 0">
+                    <TextBlock FontSize="16">产品系列：</TextBlock>
+                    <TextBlock FontSize="16">Linux 14.04.5 LTS</TextBlock>
+                </WrapPanel>
+                <WrapPanel Grid.Row="4" VerticalAlignment="Center" Margin="70 0 0 0">
+                    <TextBlock FontSize="16">内存容量：</TextBlock>
+                    <TextBlock FontSize="16">》32GB</TextBlock>
+                </WrapPanel>
+                <WrapPanel Grid.Row="5" VerticalAlignment="Center" Margin="70 0 0 0">
+                    <TextBlock FontSize="16">磁盘容量及数目：</TextBlock>
+                    <TextBlock FontSize="16">2块300GB</TextBlock>
+                </WrapPanel>
+                <WrapPanel Grid.Row="6" VerticalAlignment="Center" Margin="70 0 0 0">
+                    <TextBlock FontSize="16">处理器类型：</TextBlock>
+                    <TextBlock FontSize="16">因特尔-至强-7500系列</TextBlock>
+                </WrapPanel>
+                <WrapPanel Grid.Row="7" VerticalAlignment="Center" Margin="70 0 0 0">
+                    <TextBlock FontSize="16">处理器高速缓存：</TextBlock>
+                    <TextBlock FontSize="16">》16M 三级缓存</TextBlock>
+                </WrapPanel>
+            </Grid>
+        </GroupBox>
+        
+        <GroupBox Grid.Row="0" Grid.Column="1" Style="{StaticResource CommonGroupBox}" Header="CPU利用率" Margin="0 0 10 20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 0 40" Name="cpuUse">0%</TextBlock>
+                <Border Grid.Column="1" BorderThickness="0" CornerRadius="5" Margin="15 30 20 40">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF5FDFFB" Offset="0"/>
+                            <GradientStop Color="#d9ebf6" Offset="0.8"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border.Effect>
+                        <DropShadowEffect Color="Gray" Direction="-70" Opacity="0.8"/>
+                    </Border.Effect>
+                    <Grid x:Name="Simon1" Margin="10"/>
+                </Border>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="0" Grid.Column="2" Style="{StaticResource CommonGroupBox}" Header="CPU温度(预留)" Margin="10 0 0 20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 0 40" Name="temperature">0°</TextBlock>
+                <Border Grid.Column="1" BorderThickness="0" CornerRadius="5" Margin="15 30 20 40">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF5FDFFB" Offset="0"/>
+                            <GradientStop Color="#d9ebf6" Offset="0.8"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border.Effect>
+                        <DropShadowEffect Color="Gray" Direction="-70" Opacity="0.8"/>
+                    </Border.Effect>
+                    <Grid x:Name="Simon2" Margin="10"/>
+                </Border>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1" Grid.Column="1" Style="{StaticResource CommonGroupBox}" Header="磁盘占用率" Margin="0 20 10 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 0 40" Name="disks">0%</TextBlock>
+                <Border Grid.Column="1" BorderThickness="0" CornerRadius="5" Margin="15 30 20 40">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF5FDFFB" Offset="0"/>
+                            <GradientStop Color="#d9ebf6" Offset="0.8"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border.Effect>
+                        <DropShadowEffect Color="Gray" Direction="-70" Opacity="0.8"/>
+                    </Border.Effect>
+                    <Grid x:Name="Simon3" Margin="10"/>
+                </Border>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1" Grid.Column="2" Style="{StaticResource CommonGroupBox}" Header="内存使用" Margin="10 20 0 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 0 40" Name="rooms">0%</TextBlock>
+                <Border Grid.Column="1" BorderThickness="0" CornerRadius="5" Margin="15 30 20 40">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#FF5FDFFB" Offset="0"/>
+                            <GradientStop Color="#d9ebf6" Offset="0.8"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border.Effect>
+                        <DropShadowEffect Color="Gray" Direction="-70" Opacity="0.8"/>
+                    </Border.Effect>
+                    <Grid x:Name="Simon4" Margin="10"/>
+                </Border>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Page>

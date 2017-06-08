@@ -1,0 +1,555 @@
+﻿<Window x:Class="MaritimeSecurityMonitoring.MonitoringInterface"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="海上平台水面安防预警系统" Icon="Image\SmallLogo.png" 
+        Width="1920" Height="1080" MinWidth="800" MinHeight="600"  WindowState="Maximized">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.3"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type ToggleButton}">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.3"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MenuButton" TargetType="{x:Type Button}">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="15 0 0 0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="bd1" BorderThickness="0" Background="Transparent">
+                            <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd1" Property="Background" Value="#FF6EB5DC"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="MenuItemButton" TargetType="{x:Type Button}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="bd2" BorderThickness="0" Background="#d9ebf6">
+                            <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" Margin="15 5 25 5"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd2" Property="Background" Value="#FF6EB5DC"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="Menu2Button" TargetType="{x:Type Button}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="bd3" BorderThickness="0" Background="#d9ebf6">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter Grid.Column="0" Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" Margin="15 5 25 5"/>
+                                <Polygon Grid.Column="1" x:Name="ButtonPolygon" Stretch="Fill" Points="0,0 0,10 20,5" Width="8" Height="8" StrokeThickness="0" Margin="0 0 5 0">
+                                    <Polygon.Fill>
+                                        <SolidColorBrush Color="Black" Opacity="0.4"/>
+                                    </Polygon.Fill>
+                                </Polygon>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd3" Property="Background" Value="#FF6EB5DC"/>
+                                <Setter TargetName="ButtonPolygon" Property="Fill" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="MenuToggleButton" TargetType="{x:Type ToggleButton}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Border x:Name="bd4" BorderThickness="0" Background="#d9ebf6">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter Grid.Column="0" Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" Margin="15 5 25 5"/>
+                                <Polygon Grid.Column="1" x:Name="ButtonPolygon" Stretch="Fill" Points="0,3 1.5,2 4,4 9,0 10,1 4,6" Width="12" Height="12" StrokeThickness="0" Margin="0 0 8 0" Visibility="Hidden">
+                                    <Polygon.Fill>
+                                        <SolidColorBrush Color="Black" Opacity="0.4"/>
+                                    </Polygon.Fill>
+                                </Polygon>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd4" Property="Background" Value="#FF6EB5DC"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="ButtonPolygon" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="MenuRadioButton" TargetType="{x:Type RadioButton}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Border x:Name="bd5" BorderThickness="0" Background="#d9ebf6">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter Grid.Column="0" Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" Margin="15 5 25 5"/>
+                                <Polygon Grid.Column="1" x:Name="ButtonPolygon" Stretch="Fill" Points="0,3 1.5,2 4,4 9,0 10,1 4,6" Width="12" Height="12" StrokeThickness="0" Margin="0 0 8 0" Visibility="Hidden">
+                                    <Polygon.Fill>
+                                        <SolidColorBrush Color="Black" Opacity="0.4"/>
+                                    </Polygon.Fill>
+                                </Polygon>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd5" Property="Background" Value="#FF6EB5DC"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="ButtonPolygon" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <RoutedUICommand x:Key="ToBigger" Text="Button Click"/>
+        <RoutedUICommand x:Key="ToSmaller" Text="Button Click"/>
+        <RoutedUICommand x:Key="TopMove" Text="Button Click"/>
+        <RoutedUICommand x:Key="BottomMove" Text="Button Click"/>
+        <RoutedUICommand x:Key="LeftMove" Text="Button Click"/>
+        <RoutedUICommand x:Key="RightMove" Text="Button Click"/>
+        <RoutedUICommand x:Key="Help"/>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Key="Add" Command="{StaticResource ToBigger}"/>
+        <KeyBinding Key="Subtract" Command="{StaticResource ToSmaller}"/>
+        <KeyBinding Key="Up" Command="{StaticResource TopMove}"/>
+        <KeyBinding Key="Down" Command="{StaticResource BottomMove}"/>
+        <KeyBinding Key="Left" Command="{StaticResource LeftMove}"/>
+        <KeyBinding Key="Right" Command="{StaticResource RightMove}"/>
+        <KeyBinding Key="F1" Command="{StaticResource Help}"/>
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource ToBigger}"
+                        CanExecute="CommandBinding_CanExecute"
+                        Executed="CommandBinding_Executed1"/>
+        <CommandBinding Command="{StaticResource ToSmaller}"
+                        CanExecute="CommandBinding_CanExecute"
+                        Executed="CommandBinding_Executed2"/>
+        <CommandBinding Command="{StaticResource TopMove}"
+                        CanExecute="CommandBinding_CanExecute"
+                        Executed="CommandBinding_Executed3"/>
+        <CommandBinding Command="{StaticResource BottomMove}"
+                        CanExecute="CommandBinding_CanExecute"
+                        Executed="CommandBinding_Executed4"/>
+        <CommandBinding Command="{StaticResource LeftMove}"
+                        CanExecute="CommandBinding_CanExecute"
+                        Executed="CommandBinding_Executed5"/>
+        <CommandBinding Command="{StaticResource RightMove}"
+                        CanExecute="CommandBinding_CanExecute"
+                        Executed="CommandBinding_Executed6"/>
+        <CommandBinding Command="{StaticResource Help}"
+                        CanExecute="CommandBinding_CanExecute"
+                        Executed="CommandBinding_Executed7"/>
+    </Window.CommandBindings>
+
+    <Viewbox Stretch="Fill">
+        <Border BorderThickness="0" Background="#FF007CC3">
+            <Grid Grid.Row="3" Width="1920" Height="1080">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Height="35">
+                    <Border BorderThickness="0 0 0 1" BorderBrush="White" Margin="0 0 0 5">
+                        <DockPanel>
+                            <Button x:Name="menu1" Style="{StaticResource MenuButton}" Click="MenuPopupClick" Tag="popup1">态势显示</Button>
+                            <Popup x:Name="popup1" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu1}" 
+                               Placement="Bottom" VerticalOffset="3" AllowsTransparency="True">
+                                <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <ToggleButton Grid.Row="0" Style="{StaticResource MenuToggleButton}" Click="AISSituationClick" Name="ais">AIS态势</ToggleButton>
+                                        <ToggleButton Grid.Row="1" Style="{StaticResource MenuToggleButton}" Click="radarSituationClick" Name="radar">雷达态势</ToggleButton>
+                                        <ToggleButton Grid.Row="2" Style="{StaticResource MenuToggleButton}" Click="mixSituationClick" Name="mix">融合态势</ToggleButton>
+                                        <Border Grid.Row="3" Height="2" BorderThickness="1" BorderBrush="LightGray"/>
+                                        <ToggleButton Grid.Row="4" Style="{StaticResource MenuToggleButton}" Click="radarScanningLineClick" Name="radarLine">雷达扫描线</ToggleButton>
+                                        <ToggleButton Grid.Row="5" Style="{StaticResource MenuToggleButton}" Click="optoelectronicRangeClick" Name="opt">光电扫描范围</ToggleButton>
+                                        <Border Grid.Row="6" Height="2" BorderThickness="1" BorderBrush="LightGray"/>
+                                        <Button Grid.Row="7" Style="{StaticResource MenuItemButton}" Click="ShowTargetPropertyClick">目标属性显示</Button>
+                                    </Grid>
+                                </Border>
+                            </Popup>
+
+                            <Button x:Name="menu2" Style="{StaticResource MenuButton}" Click="MenuPopupClick" Tag="popup2">报警管理</Button>
+                            <Popup x:Name="popup2" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu2}" 
+                               Placement="Bottom" VerticalOffset="3" AllowsTransparency="True">
+                                <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Button Grid.Row="0" Style="{StaticResource MenuItemButton}" Click="PlatformCenterSettingClick" Tag="popup21" MouseEnter="Menu_Close_Ensure" Name="platformSsetting">平台中心设置</Button>
+                                        <Button Grid.Row="1" Style="{StaticResource MenuItemButton}" Click="defenseSpheresSettingClick" Tag="popup21" MouseEnter="Menu_Close_Ensure" Name="defenseCircle">防护圈层设置</Button>
+                                        <Button Grid.Row="2" Style="{StaticResource MenuItemButton}" Click="warnAreaSettingClick" Tag="popup21" MouseEnter="Menu_Close_Ensure">防护区管理</Button>
+                                        <Border Grid.Row="3" Height="2" BorderThickness="1" BorderBrush="LightGray"/>
+                                        <Button Grid.Row="4" Style="{StaticResource MenuItemButton}" Click="whiteListSettingClick" Tag="popup21" MouseEnter="Menu_Close_Ensure" Name="whiteList">船舶白名单管理</Button>
+                                        <Border Grid.Row="5" Height="2" BorderThickness="1" BorderBrush="LightGray"/>
+                                        <Button x:Name="menu21" Grid.Row="6" Style="{StaticResource Menu2Button}" Tag="popup21" MouseEnter="MenuPopupClick" MouseLeave="Menu_Close">报警方式设置</Button>
+                                        <Popup x:Name="popup21" Grid.Row="6" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu21}" Placement="Right" VerticalOffset="-5" AllowsTransparency="True">
+                                            <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <ToggleButton Grid.Row="0" Style="{StaticResource MenuToggleButton}" Click="imageWarnClick">图形</ToggleButton>
+                                                    <ToggleButton Grid.Row="1" Style="{StaticResource MenuToggleButton}" Click="voiceWarnClick">声音</ToggleButton>
+                                                </Grid>
+                                            </Border>
+                                        </Popup>
+                                    </Grid>
+                                </Border>
+                            </Popup>
+
+                            <Button Style="{StaticResource MenuButton}" Click="trackVideoPlaybackClick">跟踪视频回放</Button>
+
+                            <Button x:Name="menu4" Style="{StaticResource MenuButton}" Click="MenuPopupClick" Tag="popup4">光电联动控制</Button>
+                            <Popup x:Name="popup4" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu4}" 
+                               Placement="Bottom" VerticalOffset="3" AllowsTransparency="True">
+                                <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Button x:Name="menu41" Grid.Row="0" Style="{StaticResource Menu2Button}" Tag="popup41" MouseEnter="MenuPopupClick" MouseLeave="Menu_Close">联动控制</Button>
+                                        <Popup x:Name="popup41" Grid.Row="0" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu41}" Placement="Right" VerticalOffset="-5" AllowsTransparency="True">
+                                            <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <RadioButton Grid.Row="0" Style="{StaticResource MenuRadioButton}" Click="automaticLinkageClick" Name="one">自动联动</RadioButton>
+                                                    <RadioButton Grid.Row="1" Style="{StaticResource MenuRadioButton}" Click="manualControlClick" Name="count">手动联动</RadioButton>
+                                                </Grid>
+                                            </Border>
+                                        </Popup>
+                                        <Button Grid.Row="1" Style="{StaticResource MenuItemButton}" Click="PhotoelectricMaintenanceClick" Tag="popup41" MouseEnter="Menu_Close_Ensure">光电维护</Button>
+                                        <!--Popup x:Name="popup42" Grid.Row="1" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu42}" Placement="Right" VerticalOffset="-5" AllowsTransparency="True">
+                                        <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <Button Grid.Row="0" Style="{StaticResource MenuItemButton}" Click="TrackAlgorithmSelectionClick">跟踪算法选择</Button>
+                                                <Button Grid.Row="1" Style="{StaticResource MenuItemButton}" Click="TrackVideoSelectionClick">跟踪视频选择</Button>
+                                                <Button Grid.Row="2" Style="{StaticResource MenuItemButton}" Click="SoftwareLimitSettingClick">软件限位设置</Button>
+                                                <Button Grid.Row="3" Style="{StaticResource MenuItemButton}" Click="DriftCompensationClick">漂移补偿</Button>
+                                                <Button Grid.Row="4" Style="{StaticResource MenuItemButton}" Click="InfraredLensSettingClick">红外镜头设置</Button>
+                                            </Grid>
+                                        </Border>
+                                    </Popup-->
+                                    </Grid>
+                                </Border>
+                            </Popup>
+
+                            <Button Style="{StaticResource MenuButton}" Click="fusionParameterSettingClick" Name="fuseSetting">融合参数设置</Button>
+
+                            <Button x:Name="menu5" Style="{StaticResource MenuButton}" Click="MenuPopupClick" Tag="popup5">海图管理</Button>
+                            <Popup x:Name="popup5" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu5}" 
+                               Placement="Bottom" VerticalOffset="3" AllowsTransparency="True">
+                                <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Button x:Name="menu51" Grid.Row="0" Style="{StaticResource Menu2Button}" Tag="popup51" MouseEnter="MenuPopupClick" MouseLeave="Menu_Close">海图显示</Button>
+                                        <Popup x:Name="popup51" Grid.Row="0" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu51}" Placement="Right" VerticalOffset="-5" AllowsTransparency="True">
+                                            <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <RadioButton Grid.Row="0" Style="{StaticResource MenuRadioButton}" Click="showBasisDataClick">基础显示</RadioButton>
+                                                    <RadioButton Grid.Row="1" Style="{StaticResource MenuRadioButton}" Click="showStandardDataClick" IsChecked="True">标准显示</RadioButton>
+                                                    <RadioButton Grid.Row="2" Style="{StaticResource MenuRadioButton}" Click="showAllDataClick">全部显示</RadioButton>
+                                                </Grid>
+                                            </Border>
+                                        </Popup>
+                                        <Border Grid.Row="1" Height="2" BorderThickness="1" BorderBrush="LightGray"/>
+                                        <Button x:Name="menu52" Grid.Row="2" Style="{StaticResource Menu2Button}" Tag="popup52" MouseEnter="MenuPopupClick" MouseLeave="Menu_Close">海图操作</Button>
+                                        <Popup x:Name="popup52" Grid.Row="2" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu52}" Placement="Right" VerticalOffset="-5" AllowsTransparency="True">
+                                            <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Button Grid.Row="0" Style="{StaticResource MenuItemButton}" Click="toBiggerClick" xml:space="preserve">放大            +</Button>
+                                                    <Button Grid.Row="1" Style="{StaticResource MenuItemButton}" Click="toSmallerClick" xml:space="preserve">缩小             -</Button>
+                                                    <Button Grid.Row="2" Style="{StaticResource MenuItemButton}" Click="settingMeasuringScaleClick">指定比例尺</Button>
+                                                    <Border Grid.Row="3" Height="2" BorderThickness="1" BorderBrush="LightGray"/>
+                                                    <Button Grid.Row="4" Style="{StaticResource MenuItemButton}" Click="topMoveClick" xml:space="preserve">上移            Up</Button>
+                                                    <Button Grid.Row="5" Style="{StaticResource MenuItemButton}" Click="bottomMoveClick" xml:space="preserve">下移            Down</Button>
+                                                    <Button Grid.Row="6" Style="{StaticResource MenuItemButton}" Click="leftMoveClick" xml:space="preserve">左移            Left</Button>
+                                                    <Button Grid.Row="7" Style="{StaticResource MenuItemButton}" Click="rightMoveClick" xml:space="preserve">右移            Right</Button>
+                                                    <Button Grid.Row="8" Style="{StaticResource MenuItemButton}" Click="convertClick">平台归心</Button>
+                                                    <Button Grid.Row="9" Style="{StaticResource MenuItemButton}" Click="targetConvertClick">目标归心</Button>
+                                                </Grid>
+                                            </Border>
+                                        </Popup>
+                                        <Border Grid.Row="3" Height="2" BorderThickness="1" BorderBrush="LightGray"/>
+                                        <Button Grid.Row="4" Style="{StaticResource MenuItemButton}" Click="mapManageClick" Tag="5" MouseEnter="Menu_Close_Ensure">图库管理</Button>
+                                    </Grid>
+                                </Border>
+                            </Popup>
+
+                            <Button x:Name="menu6" Style="{StaticResource MenuButton}" Click="MenuPopupClick" Tag="popup6">数据管理</Button>
+                            <Popup x:Name="popup6" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu6}" 
+                               Placement="Bottom" VerticalOffset="3" AllowsTransparency="True">
+                                <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Button Grid.Row="0" Style="{StaticResource MenuItemButton}" Click="linkageEventQueryClick">联动事件查询</Button>
+                                        <Border Grid.Row="1" Height="2" BorderThickness="1" BorderBrush="LightGray"/>
+                                        <Button Grid.Row="2" Style="{StaticResource MenuItemButton}" Click="dataQueryClick">数据查询</Button>
+                                        <Button Grid.Row="3" Style="{StaticResource MenuItemButton}" Click="dateStatisticsClick">数据统计</Button>
+                                        <Border Grid.Row="4" Height="2" BorderThickness="1" BorderBrush="LightGray"/>
+                                        <Button Grid.Row="5" Style="{StaticResource MenuItemButton}" Click="shipNumberImportClick">船舷号导入</Button>
+                                        <Button Grid.Row="6" Style="{StaticResource MenuItemButton}" Click="dateExportClick">数据导出</Button>
+                                    </Grid>
+                                </Border>
+                            </Popup>
+
+                            <Button x:Name="menu7" Style="{StaticResource MenuButton}" Click="MenuPopupClick" Tag="popup7">设备管理</Button>
+                            <Popup x:Name="popup7" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu7}" 
+                               Placement="Bottom" VerticalOffset="3" AllowsTransparency="True">
+                                <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Button Grid.Row="0" Style="{StaticResource MenuItemButton}" Click="deviceOperationStatusClick">设备工作状态</Button>
+                                        <Button Grid.Row="1" Style="{StaticResource MenuItemButton}" Click="deviceNetworkStatuisClick">设备网络连接状态</Button>
+                                    </Grid>
+                                </Border>
+                            </Popup>
+
+                            <Button x:Name="menu8" Style="{StaticResource MenuButton}" Click="MenuPopupClick" Tag="popup8">系统管理</Button>
+                            <Popup x:Name="popup8" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=menu8}" 
+                               Placement="Bottom" VerticalOffset="3" AllowsTransparency="True">
+                                <Border BorderThickness="2" BorderBrush="SteelBlue" Background="#d9ebf6">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Button Grid.Row="0" Style="{StaticResource MenuItemButton}" Click="userManagementClick" Name="userManager">用户管理</Button>
+                                        <Button Grid.Row="1" Style="{StaticResource MenuItemButton}" Click="networkParameterSettingClick">网络参数设置</Button>
+                                    </Grid>
+                                </Border>
+                            </Popup>
+
+                            <Button Style="{StaticResource MenuButton}" Click="helpClick">帮助(F1)</Button>
+                        </DockPanel>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="1" Height="60">
+                    <Border BorderThickness="0" Background="#FF6EB5DC" CornerRadius="8" Margin="5 0 5 0">
+                        <DockPanel>
+                            <Image Height="45" Margin="10 0 0 0" Source="Image\SeperateLine.png"/>
+                            <ToggleButton ToolTip="双屏显示" Click="doubleScreenShowClick" Margin="10 0 0 0">
+                                <Image Source="Image\ExtendScreenNew.png"/>
+                            </ToggleButton>
+                            <Image Height="45" Margin="10 0 0 0" Source="Image\SeperateLine.png"/>
+                            <ToggleButton ToolTip="漫游" Click="moveClick" Margin="10 0 0 0" Name="move">
+                                <Image Source="Image\DragMoveNew.png"/>
+                            </ToggleButton>
+                            <Button ToolTip="上移" Click="topMoveClick" Margin="15 0 0 0">
+                                <Image Source="Image\UpMoveNew.png"/>
+                            </Button>
+                            <Button ToolTip="下移" Click="bottomMoveClick" Margin="15 0 0 0">
+                                <Image Source="Image\DownMoveNew.png"/>
+                            </Button>
+                            <Button ToolTip="左移" Click="leftMoveClick" Margin="15 0 0 0">
+                                <Image Source="Image\LeftMoveNew.png"/>
+                            </Button>
+                            <Button  ToolTip="右移" Click="rightMoveClick" Margin="15 0 0 0">
+                                <Image Source="Image\RightMoveNew.png" />
+                            </Button>
+                            <Button ToolTip="平台归心" Click="convertClick" Margin="15 0 0 0">
+                                <Image Source="Image\ForCenteringNew.png"/>
+                            </Button>
+                            <Button ToolTip="目标归心" Click="targetConvertClick" Margin="15 0 0 0" Name="targetCenter">
+                                <Image Source="Image\PlatformCentering.png"/>
+                            </Button>
+                            <Image Height="45" Margin="10 0 0 0" Source="Image\SeperateLine.png"/>
+                            <Button ToolTip="放大" Click="toBiggerClick" Margin="10 0 0 0">
+                                <Image Source="Image\ToBigNew.png"/>
+                            </Button>
+                            <Button ToolTip="缩小" Click="toSmallerClick" Margin="10 0 0 0">
+                                <Image Source="Image\ToSmallNew.png"/>
+                            </Button>
+                            <ToggleButton ToolTip="区域放大" Click="partToBiggerClick" Margin="15 0 0 0" Name="area">
+                                <Image Source="Image\PartToBig.png"/>
+                            </ToggleButton>
+                            <Button ToolTip="指定比例尺" Click="settingMeasuringScaleClick" Margin="15 0 0 0">
+                                <Image Width="40" Source="Image\ScaleNew.png"/>
+                            </Button>
+                            <ToggleButton ToolTip="测距" Click="measureDistanceClick" Margin="15 0 0 0" Name="measure">
+                                <Image Source="Image\MeasureNew.png"/>
+                            </ToggleButton>
+                            <Image Height="45" Margin="10 0 0 0" Source="Image\SeperateLine.png"/>
+                            <Button ToolTip="多边形区域标注" Click="areaLabelClick" Margin="10 0 0 0" Name="poly">
+                                <Image Source="Image\AreaSignNew.png"/>
+                            </Button>
+                            <Button ToolTip="管道区域标注" Click="pipelineClick" Margin="15 0 0 0" Name="pipe">
+                                <Image Source="Image\PipelineNew.png"/>
+                            </Button>
+                            <Image Height="45" Margin="10 0 0 0" Source="Image\SeperateLine.png"/>
+                            <Button ToolTip="态势回放" Click="situationPlaybackClick" Margin="10 0 0 0" Name="playback">
+                                <Image Width="40" Source="Image\PlaySituationNew.png"/>
+                            </Button>
+                            <ToggleButton ToolTip="航迹查询" Click="queryTrackClick" Margin="15 0 0 0" Name="track">
+                                <Image Source="Image\TrackSearchNew.png"/>
+                            </ToggleButton>
+                            <Image Height="45" Margin="10 0 0 0" Source="Image\SeperateLine.png"/>
+                            <Button ToolTip="返回主界面" Click="returnClick" Margin="10 0 0 0" Name="getBank">
+                                <Image Source="Image\ReturnBackNew.png"/>
+                            </Button>
+                        </DockPanel>
+                    </Border>
+                    <Label x:Name="PrecvAIS" Visibility="Hidden" Content="AIS" HorizontalAlignment="Left" Margin="1318,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.54,-0.32"/>
+                    <Label x:Name="PrecvRader" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" Margin="1395,16,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="PrecvFus" Visibility="Hidden" Content="Fusion" HorizontalAlignment="Left" Margin="1484,16,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="ProcessFus" Visibility="Hidden" Content="Label" HorizontalAlignment="Left" Margin="1579,16,0,0" VerticalAlignment="Top"/>
+
+
+                </Grid>
+
+                <Frame Grid.Row="2" Name="content" Margin="0 0 0 0" NavigationUIVisibility="Hidden" Source="MonitoringX.xaml"/>
+
+                <Grid Grid.Row="3" Height="30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="677*"/>
+                        <ColumnDefinition Width="1243*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="Image\AlarmGreen.png" Width="20" ToolTip="管道防护区" Name="pipeL" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,35,5" Grid.Column="1"/>
+                    <Image Source="Image\AlarmGreen.png" Width="20" ToolTip="多边形防护区" Name="polyL" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,80,5" Grid.Column="1"/>
+                    <Image Source="Image\AlarmGreen.png" Width="20" ToolTip="预警区" Name="PreAlarmL" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,125,5" Grid.Column="1"/>
+                    <Image Source="Image\AlarmGreen.png" Width="20" ToolTip="警戒区" Name="JinjieL" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,170,5" Grid.Column="1"/>
+                    <Image Source="Image\AlarmGreen.png" Width="20" ToolTip="驱逐区" Name="QuZhuL" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,215,5" Grid.Column="1"/>
+                    <Image Source="Image\AlarmGreen.png" Width="20" ToolTip="平台碰撞" Name="PintaiL" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,260,5" Grid.Column="1"/>
+
+                    <Image Source="Image\MixGreen.png" ToolTip="光电连接正常" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,2,379,2" Name="baojingguangdian" Grid.Column="1"/>
+                    <Image Source="Image\RadarGreen.png" ToolTip="雷达2连接正常" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,2,426,2" Name="baojingleida2" Grid.Column="1"/>
+                    <Image Source="Image\RadarGreen.png" ToolTip="雷达1连接正常" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,2,473,2" Name="baojingleida1" Grid.Column="1"/>
+                    <Image Source="Image\AISGreen.png" ToolTip="AIS连接正常" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,2,522,2" Name="baojingAIS" RenderTransformOrigin="-1.39,0.464" Grid.Column="1"/>
+                    
+                    <Label x:Name="label1" Content="AIS船舶数 "  HorizontalAlignment="Left" Margin="85,0,0,0" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                    <Label x:Name="label2" Content="雷达船舶数 " HorizontalAlignment="Left" Margin="263,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+                    <Label x:Name="label3" Content="融合船舶数" HorizontalAlignment="Left" Margin="461,0,0,0" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                    <Label x:Name="AISObj" Content="0" HorizontalAlignment="Left" Margin="181,0,0,0" VerticalAlignment="Center"/>
+                    <Label x:Name="RaderObj" Content="0" HorizontalAlignment="Left" Margin="358,0,0,0" VerticalAlignment="Center"/>
+                    <Label x:Name="FusionObj" Content="0" HorizontalAlignment="Left" Margin="560,0,0,0" VerticalAlignment="Center"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Viewbox>
+</Window>

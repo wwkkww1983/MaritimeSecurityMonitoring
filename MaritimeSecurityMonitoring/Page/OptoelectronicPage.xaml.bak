@@ -1,0 +1,181 @@
+﻿<Page x:Class="MaritimeSecurityMonitoring.OptoelectronicPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="545" d:DesignWidth="1100"
+	  Title="OptoelectronicPage" Background="Transparent">
+    <Page.Resources>
+        <Style TargetType="{x:Type RadioButton}">
+            <Setter Property="BorderBrush" Value="#FFA3C5EE"/>
+            <Setter Property="Background" Value="#d9ebf6"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="CornerTextBox" TargetType="{x:Type TextBox}">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="100 0 0 0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border BorderThickness="1" BorderBrush="#FFA3C5EE" Background="Transparent" CornerRadius="5">
+                            <ScrollViewer x:Name="PART_ContentHost" Width="{TemplateBinding Width}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Margin="200 20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Grid.Row="0" Style="{StaticResource CommonGroupBox}" Header="设备开机状态">
+            <WrapPanel VerticalAlignment="Center">
+                <RadioButton Margin="180 0 0 0" Name="right">正常</RadioButton>
+                <RadioButton Margin="80 0 0 0" Name="worry">故障</RadioButton>
+            </WrapPanel>
+        </GroupBox>
+
+        <Grid Grid.Row="1" Margin="0 30 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Column="0" Style="{StaticResource CommonGroupBox}" Header="系统状态" Margin="0 0 30 0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.5*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="1" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="80 0 0 0">俯仰驱动模式：</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text2"> --</TextBlock>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="80 0 0 0">方位驱动模式：</TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text3"> --</TextBlock>
+
+                    <TextBlock Grid.Row="3" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="95 0 0 0">红外热像仪状态：</TextBlock>
+                    <TextBlock Grid.Row="3" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text4"> --</TextBlock>
+
+                    <TextBlock Grid.Row="4" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="95 0 0 0">俯仰驱动上限位：</TextBlock>
+                    <TextBlock Grid.Row="4" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text5"> --</TextBlock>
+
+                    <TextBlock Grid.Row="5" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="95 0 0 0">俯仰驱动下限位：</TextBlock>
+                    <TextBlock Grid.Row="5" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text6"> --</TextBlock>
+
+                    <TextBlock Grid.Row="6" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="95 0 0 0">方位驱动左限位：</TextBlock>
+                    <TextBlock Grid.Row="6" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text7"> --</TextBlock>
+
+                    <TextBlock Grid.Row="7" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="95 0 0 0">方位驱动右限位：</TextBlock>
+                    <TextBlock Grid.Row="7" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text8"> --</TextBlock>
+
+                    <TextBlock Grid.Row="8" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="80 0 0 0">当前视频显示：</TextBlock>
+                    <TextBlock Grid.Row="8" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text9"> --</TextBlock>
+
+                    <TextBlock Grid.Row="9" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="110 0 0 0">控制器初始化状态：</TextBlock>
+                    <TextBlock Grid.Row="9" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text10"> --</TextBlock>
+
+                    <TextBlock Grid.Row="10" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50 0 0 0">伺服状态：</TextBlock>
+                    <TextBlock Grid.Row="10" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text11"> --</TextBlock>
+
+                    <TextBlock Grid.Row="11" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="80 0 0 0">驱动使能情况：</TextBlock>
+                    <TextBlock Grid.Row="11" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text12"> --</TextBlock>
+
+                    <TextBlock Grid.Row="12" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="95 0 0 0">硬盘录像机状态：</TextBlock>
+                    <TextBlock Grid.Row="12" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text13"> --</TextBlock>
+
+                    <TextBlock Grid.Row="13" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="95 0 0 0">广角摄像机状态：</TextBlock>
+                    <TextBlock Grid.Row="13" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text14"> --</TextBlock>
+
+                    <TextBlock Grid.Row="14" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="95 0 0 0">长焦摄像机状态：</TextBlock>
+                    <TextBlock Grid.Row="14" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="text15"> --</TextBlock>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Grid.Column="1" Style="{StaticResource CommonGroupBox}" Header="目标跟踪参数" Margin="30 0 0 0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.6*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="1" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="80 0 0 0">目标跟踪状态：</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="test1"> --</TextBlock>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="80 0 0 0">跟踪视频状态：</TextBlock>
+                    <TextBlock Grid.Row="2" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="test2"> --</TextBlock>
+
+                    <TextBlock Grid.Row="3" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="110 0 0 0">移动目标侦测控制：</TextBlock>
+                    <TextBlock Grid.Row="3" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="test3"> --</TextBlock>
+
+                    <TextBlock Grid.Row="4" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="80 0 0 0">俯仰测角状态：</TextBlock>
+                    <TextBlock Grid.Row="4" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="test4"> --</TextBlock>
+                    <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource CornerTextBox}"/>
+
+                    <TextBlock Grid.Row="5" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="80 0 0 0">方位测角状态：</TextBlock>
+                    <TextBlock Grid.Row="5" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="test5"> --</TextBlock>
+                    <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource CornerTextBox}"/>
+
+                    <TextBlock Grid.Row="6" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="140 0 0 0">波门中心点Y坐标控制：</TextBlock>
+                    <TextBlock Grid.Row="6" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="test6"> --</TextBlock>
+                    <TextBox Grid.Row="6" Grid.Column="1" Style="{StaticResource CornerTextBox}"/>
+
+                    <TextBlock Grid.Row="7" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="140 0 0 0">波门中心点X坐标控制：</TextBlock>
+                    <TextBlock Grid.Row="7" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="test7"> --</TextBlock>
+                    <TextBox Grid.Row="7" Grid.Column="1" Style="{StaticResource CornerTextBox}"/>
+
+                    <TextBlock Grid.Row="8" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="95 0 0 0">俯仰脱靶量控制：</TextBlock>
+                    <TextBlock Grid.Row="8" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="test8"> --</TextBlock>
+                    <TextBox Grid.Row="8" Grid.Column="1" Style="{StaticResource CornerTextBox}"/>
+
+                    <TextBlock Grid.Row="9" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="95 0 0 0">方位脱靶量控制：</TextBlock>
+                    <TextBlock Grid.Row="9" Grid.Column="1" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Name="test9"> --</TextBlock>
+                    <TextBox Grid.Row="9" Grid.Column="1" Style="{StaticResource CornerTextBox}"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Page>

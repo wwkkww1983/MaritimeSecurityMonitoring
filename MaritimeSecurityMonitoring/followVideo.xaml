@@ -1,0 +1,25 @@
+﻿<Window x:Class="MaritimeSecurityMonitoring.followVideo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:DVR="clr-namespace:NVRCsharpDemo;assembly=NVRCsharpDemo"
+        xmlns:wfi ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration" 
+        Title="追踪视频" Width="800" MinWidth="800" MaxWidth="800" Height="615" MinHeight="615" MaxHeight="615" WindowStyle="None" ResizeMode="NoResize" MouseLeftButtonDown="dragMoveWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BorderBrush="#1e8ab7" BorderThickness="4"></Border>
+        <Label Background="#1e8ab7" Foreground="White" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="17" Name="title">长焦视频追踪窗口</Label>
+        <Button  HorizontalAlignment="Right" Height="22" Width="22" BorderThickness="0" Margin="2" Click="closeWindowClick">
+            <Button.Background>
+                <ImageBrush ImageSource="Image\Close.png" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <wfi:WindowsFormsHost Grid.Row="1">
+            <!--长焦视频播放控件嵌入-->
+            <DVR:mypanel x:Name="followPictureBox" Margin="0,0,0,0"></DVR:mypanel>
+        </wfi:WindowsFormsHost>
+    </Grid>
+</Window>

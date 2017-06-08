@@ -1,0 +1,205 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+
+using MaritimeSecurityMonitoring.MainInterfacePage;
+
+namespace MaritimeSecurityMonitoring
+{
+    /// <summary>
+    /// QueryTrack.xaml 的交互逻辑
+    /// </summary>
+    public partial class QueryTrack : Window
+    {
+        ObservableCollection<int> tl = new ObservableCollection<int>();
+        private string trackType = "radar1";
+
+        private long start = 0;
+        private long end = 0;
+        private int targetInfor = 0;
+
+        private int nowListCount = 0;//当前列表项数
+        public QueryTrack()
+        {
+            InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            startTime.Text = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1, 0, 0, 0).ToString();
+            endTime.Text = DateTime.Now.ToString();
+            targetListBox.DataContext = tl;
+        }
+        private void closeWindowClick(object sender, RoutedEventArgs e)
+        {
+            MonitoringInterface.moninterface.queryTrackFlish();//关闭窗口，按钮还原
+            this.Close();
+        }
+        private void dragMoveWindow(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();//实现整个窗口的拖动
+        }
+        private void radarClick(object sender, RoutedEventArgs e)
+        {
+            trackType = "radar1";
+        }
+        private void radar2Click(object sender, RoutedEventArgs e)
+        {
+            trackType = "radar2";
+        }
+        private void AISClick(object sender, RoutedEventArgs e)
+        {
+            trackType = "AIS";
+        }
+        private void MixClick(object sender, RoutedEventArgs e)
+        {
+            trackType = "Mix";
+        }
+        private void PullDownClick(object sender, RoutedEventArgs e)
+        {
+            targetPopup.IsOpen = true;
+            if (startTime.Text == null || endTime.Text == null)
+            {
+                MessageBoxX.Show("提示", "时间不能为空！");
+            }
+            else
+            {
+
+                System.DateTime time = Convert.ToDateTime(startTime.Text);//string转datatime（star）
+                start = (long)GetTimeStamp(time);//datatime时间戳（star）
+
+                System.DateTime timer = Convert.ToDateTime(endTime.Text);//string转datatime（end）
+                end = (long)GetTimeStamp(timer);//datatime时间戳（end）
+
+                if (start >= end)
+                {
+                    MessageBoxX.Show("提示","时间选择有误！");
+                }
+                else if(end-start>=60*24*60*60)
+                {
+                    MessageBoxX.Show("提示", "时间不超过两个月！");
+                }
+                else
+                {
+                    if (trackType == "radar1")
+                    {
+                        tl.Clear();
+                        List<int[]> a = MonitoringX.radarTargetListBack(start, end,1);//雷达列表获取
+                        for (int i = 0; i < a.Count; i++)//添加当前的列表
+                        {
+                            tl.Add(a[i][0]);
+                        }
+                        nowListCount = tl.Count;
+                    }
+                    else if (trackType == "radar2")
+                    {
+                        tl.Clear();
+                        List<int[]> a = MonitoringX.radarTargetListBack(start, end, 2);//雷达列表获取
+                        for (int i = 0; i < a.Count; i++)//添加当前的列表
+                        {
+                            tl.Add(a[i][0]);
+                        }
+                        nowListCount = tl.Count;
+                    }
+                    else if (trackType == "AIS")
+                    {
+                        tl.Clear();
+                        List<int> a = MonitoringX.AISTargetListBack(start, end);//AIS列表获取
+                        for (int i = 0; i < a.Count; i++)//添加当前的列表
+                        {
+                            tl.Add(a[i]);
+                        }
+                        nowListCount = tl.Count;
+                    }
+                    else if (trackType == "Mix")
+                    {
+                        tl.Clear();
+                        List<int> a = MonitoringX.fuseTargetListBack(start, end);//融合列表获取
+                        for (int i = 0; i < a.Count; i++)//添加当前的列表
+                        {
+                            tl.Add(a[i]);
+                        }
+                        nowListCount = tl.Count;
+                    }
+                }
+            }
+        }
+        private void ConfirmClick(object sender, RoutedEventArgs e)
+        {
+            if (startTime.Text == null || endTime.Text == null)
+            {
+                MessageBoxX.Show("提示","时间不能为空！");
+            }
+            else if (target.Text=="")
+            {
+                MessageBoxX.Show("提示", "查询目标不能为空！");
+            }
+            else
+            {
+                System.DateTime time = Convert.ToDateTime(startTime.Text);//string转datatime（star）
+                start = (long)GetTimeStamp(time);//datatime时间戳（star）
+
+                System.DateTime timer = Convert.ToDateTime(endTime.Text);//string转datatime（end）
+                end = (long)GetTimeStamp(timer);//datatime时间戳（end）
+
+                if (trackType == "radar1")
+                {
+                    targetInfor=(int)double.Parse(target.Text);
+                    MonitoringX.radarTrackBack(start, end, targetInfor,1);//调用雷达航迹查询
+                }else if (trackType == "radar2")
+                {
+                    targetInfor = (int)double.Parse(target.Text);
+                    MonitoringX.radarTrackBack(start, end, targetInfor, 2);//调用雷达航迹查询
+                }
+                else if (trackType == "AIS")
+                {
+                    targetInfor = (int)double.Parse(target.Text);
+                    MonitoringX.AISTrackBack(start, end, targetInfor);//调用AIS航迹查询
+                }
+                else if (trackType == "Mix")
+                {
+                    targetInfor = (int)double.Parse(target.Text);
+                    MonitoringX.mixTrackBack(start, end, targetInfor);//调用融合航迹查询
+                }
+                this.Close();
+            }
+        }
+        private int GetTimeStamp(DateTime dt)//datatime转时间戳
+        {
+            DateTime dateStart = new DateTime(1970, 1, 1, 0, 0, 0);
+            int timeStamp = Convert.ToInt32((dt - dateStart).TotalSeconds);
+            return timeStamp;
+        }
+        private void CancelClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ChooseTargetClick(object sender, SelectionChangedEventArgs e)
+        {
+            if (targetListBox.SelectedIndex >= 0)
+            {
+                target.Text = tl[targetListBox.SelectedIndex].ToString();
+                targetPopup.IsOpen = false;
+            }
+        }
+
+        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

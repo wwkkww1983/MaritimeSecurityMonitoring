@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MaritimeSecurityMonitoring.DataQuetycs
+{
+    class alarmData
+    {
+        public string alarmNumber { get; set; }
+        public string time { get; set; }
+        public string radarNumber { get; set; }
+        public string IMO { get; set; }
+        public string alarmString { get; set; }
+    }
+}

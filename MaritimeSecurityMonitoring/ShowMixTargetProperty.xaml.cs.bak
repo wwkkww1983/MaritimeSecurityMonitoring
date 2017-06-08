@@ -1,0 +1,115 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+using MaritimeSecurityMonitoring.MainInterfacePage;
+
+namespace MaritimeSecurityMonitoring
+{
+    /// <summary>
+    /// ShowMixTargetProperty.xaml 的交互逻辑
+    /// </summary>
+    public partial class ShowMixTargetProperty : Window
+    {
+        public ShowMixTargetProperty()
+        {
+            InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
+            if (MonitoringX.page == "当前")
+            {
+                mixNmuber.Text = MonitoringX.nowTarget.ID.ToString();
+                boatName.Text = MonitoringX.nowTarget.Name;
+                findTime.Text = MonitoringX.nowTarget.UpdateTime;
+                boatNumber.Text = MonitoringX.nowTarget.CallSign;
+                string a = "其他";
+                if ((int)MonitoringX.nowTarget.DataType == 2)
+                {
+                    a = "AIS";
+                }
+                else if ((int)MonitoringX.nowTarget.DataType == 3)
+                {
+                    a = "雷达";
+                }
+                else if ((int)MonitoringX.nowTarget.DataType == 100)
+                {
+                    a = "融合";
+                }
+                mixType.Text = a;
+                country.Text = MonitoringX.nowTarget.Nationality;
+                srcNum.Text = MonitoringX.nowTarget.SrcNum.ToString();
+                high.Text = MonitoringX.nowTarget.MaxDeep.ToString();
+                longitude.Text = MonitoringX.nowTarget.Longitude.ToString();
+                peopleNumber.Text = MonitoringX.nowTarget.Capacity.ToString();
+                lagitude.Text = MonitoringX.nowTarget.Latitude.ToString();
+                distination.Text = MonitoringX.nowTarget.Destination;
+                distance.Text = MonitoringX.nowTarget.Distance.ToString();
+                raderNumber.Text = MonitoringX.nowTarget.RadarBatchNum.ToString();
+                angle.Text = MonitoringX.nowTarget.Course.ToString();
+                MMSI.Text = MonitoringX.nowTarget.MIMSI;
+            }else if (MonitoringX.page == "回放")
+            {
+                
+                mixNmuber.Text = MonitoringReturn.nowTarget.ID.ToString();
+                boatName.Text = MonitoringReturn.nowTarget.Name;
+                findTime.Text = MonitoringReturn.nowTarget.UpdateTime;
+                boatNumber.Text = MonitoringReturn.nowTarget.CallSign;
+                string a = "其他";
+                if ((int)MonitoringReturn.nowTarget.DataType == 2)
+                {
+                    a = "AIS";
+                }
+                else if ((int)MonitoringReturn.nowTarget.DataType == 3)
+                {
+                    a = "雷达";
+                }
+                else if ((int)MonitoringReturn.nowTarget.DataType == 100)
+                {
+                    a = "融合";
+                }
+                mixType.Text = a;
+                country.Text = MonitoringReturn.nowTarget.Nationality;
+                srcNum.Text = MonitoringReturn.nowTarget.SrcNum.ToString();
+                high.Text = MonitoringReturn.nowTarget.MaxDeep.ToString();
+                longitude.Text = MonitoringReturn.nowTarget.Longitude.ToString();
+                peopleNumber.Text = MonitoringReturn.nowTarget.Capacity.ToString();
+                lagitude.Text = MonitoringReturn.nowTarget.Latitude.ToString();
+                distination.Text = MonitoringReturn.nowTarget.Destination;
+                distance.Text = MonitoringReturn.nowTarget.Distance.ToString();
+                raderNumber.Text = MonitoringReturn.nowTarget.RadarBatchNum.ToString();
+                angle.Text = MonitoringReturn.nowTarget.Course.ToString();
+                MMSI.Text = MonitoringReturn.nowTarget.MIMSI;
+            }
+        }
+
+        private void closeWindowClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dragMoveWindow(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();//实现整个窗口的拖动
+        }
+
+        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

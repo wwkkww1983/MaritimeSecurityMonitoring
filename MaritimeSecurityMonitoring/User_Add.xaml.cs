@@ -1,0 +1,102 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+using MaritimeSecurityMonitoring;
+using dataAnadll;
+
+namespace MaritimeSecurityMonitoring
+{
+    /// <summary>
+    /// User_Add.xaml 的交互逻辑
+    /// </summary>
+    public partial class User_Add : Window
+    {
+        private dataAnadll.UserManager userData = new dataAnadll.UserManager();//用户管理实例化
+        public User_Add()
+        {
+            InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
+
+        private void closeWindowClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dragMoveWindow(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();//实现整个窗口的拖动
+        }
+
+        private void comfirmClick(object sender, RoutedEventArgs e)
+        {
+            if(String.IsNullOrWhiteSpace(userName.Text) || String.IsNullOrWhiteSpace(password.Text) || String.IsNullOrWhiteSpace(role.Text))
+            {
+                MessageBoxX.Show("提示", "用户名、密码、角色类型不能为空！");
+            }
+            else
+            {
+                try
+                {
+                    dataAnadll.User us = new dataAnadll.User();
+                    us.Name = userName.Text;
+                    us.Password = password.Text;
+                    us.RoleID = role.SelectedIndex;
+                    us.Department = department.Text;
+                    us.Level = position.Text;
+                    us.Email = mail.Text;
+                    us.Phone = phone.Text;
+                    userData.AddUser(us);//用户数据添加
+
+                    List<dataAnadll.User> list = new List<dataAnadll.User>();
+                    list = userData.GetAllUsers();
+                    SystemUser su = new SystemUser()
+                    {
+                        ID = UserManagement.userList.Count,
+                        UserID = list[list.Count - 1].ID.ToString(),
+                        UserName = list[list.Count - 1].Name,
+                        Password = list[list.Count - 1].Password,
+                        Role = list[list.Count - 1].RoleID.ToString(),
+                        Position = list[list.Count - 1].Level,
+                        Department = list[list.Count - 1].Department,
+                        Phone = list[list.Count - 1].Phone,
+                        Mail = list[list.Count - 1].Email,
+                        ReadOnly = true
+                    };
+                    UserManagement.userList.Add(su);
+                    this.Close();
+                }
+                catch(Exception ex)
+                {
+                    MessageBoxX.Show("警告", "存在非法的数据！");
+                }
+            }
+        }
+
+        private void cancelClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

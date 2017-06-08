@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+using MaritimeSecurityMonitoring.MainInterfacePage;
+
+namespace MaritimeSecurityMonitoring
+{
+    /// <summary>
+    /// OptoelectronicPage.xaml 的交互逻辑
+    /// </summary>
+    public partial class OptoelectronicPage : Page
+    {
+//2017 04 18 蒋明昊添加
+
+        public void Fresh()
+        {
+            if (MonitoringX.photoelectricEquipmentRuningStateStr == "正常")
+            {
+                right.IsChecked = true;
+                worry.IsChecked = false;
+            }
+            else if (MonitoringX.photoelectricEquipmentRuningStateStr == "故障")
+            {
+                right.IsChecked = false;
+                worry.IsChecked = true;
+            }
+
+            text2.Text = MonitoringX.pitchDriveModeStr;
+            text3.Text = MonitoringX.bearingDriveModeStr;
+            text4.Text = MonitoringX.InfraredStateStr;
+            text5.Text = MonitoringX.pitchDriveLimitUpStr;
+            text6.Text = MonitoringX.pitchDriveLimitDownStr;
+            text7.Text = MonitoringX.bearingDriveLimitLeftStr;
+            text8.Text = MonitoringX.bearingDriveLimitRightStr;
+            text9.Text = MonitoringX.videoSwitchStateStr;
+            text10.Text = MonitoringX.controllerInitializationStateStr;
+            text11.Text = MonitoringX.servoStateStr;
+            text12.Text = MonitoringX.driveEnabledStateStr;
+            text13.Text = MonitoringX.hardDiskVideoStatusStr;
+            text14.Text = MonitoringX.wideAngledCameraStatusStr;
+            text15.Text = MonitoringX.telephotoCameraStatusStr;
+
+            test1.Text = MonitoringX.targetTrackingStateStr;
+            test2.Text = MonitoringX.videoTrackingStatusStr;
+            test3.Text = MonitoringX.movingTargetDetectionStr;
+            test4.Text = MonitoringX.pitchAngleMeasurementStr;
+            test5.Text = MonitoringX.azimuthAngleMeasurementStr;
+            test6.Text = MonitoringX.waveGateCenterCoordinateYControlStr;
+            test7.Text = MonitoringX.waveGateCenterCoordinateXControlStr;
+            test8.Text = MonitoringX.pitchMissDistanceControlStr;
+            test9.Text = MonitoringX.azimuthMissDistanceControlStr;
+        }
+
+
+        public OptoelectronicPage()
+        {
+            InitializeComponent();
+            Fresh();
+        }
+    }
+}

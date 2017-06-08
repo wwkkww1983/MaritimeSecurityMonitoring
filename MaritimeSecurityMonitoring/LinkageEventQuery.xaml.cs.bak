@@ -1,0 +1,559 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows.Threading;
+using System.Collections.ObjectModel;
+
+using MaritimeSecurityMonitoring.MainInterfacePage;
+using dataAnadll;
+
+namespace MaritimeSecurityMonitoring
+{
+    /// <summary>
+    /// LinkageEventQuery.xaml 的交互逻辑
+    /// </summary>
+    public partial class LinkageEventQuery : Page
+    {
+
+        private DateTime linkStart;//联动列表范围时间戳
+        private DateTime linkEnd;//联动列表范围时间戳
+        private long linkTargetStart;//联动对象时间戳
+        private long linkTargetEnd;//联动对象时间戳
+        private int _linkStrartTimeStamp;
+        private int _linStopTimeStamp;
+        private int nowListIndex = -1;//当前列表选中项
+        private int currectPage = 1;//当前页码
+        private int allPage = 0;//总页数
+
+        DispatcherTimer playTimer;
+
+        IntPtr infraredRayRealWndHandle;//联动视频句柄
+        private int videoState=-2;//联动视频标识子
+        ObservableCollection<LinkageTarget> linkageList = new ObservableCollection<LinkageTarget>();
+        SeleCaptureProvider captureData;//联动事件查询数据库声明
+
+        Thread thread;//播放视频线程
+        private int isMouseDown;
+
+        private int pause=0;
+        public static string picturePath="";
+        public LinkageEventQuery()
+        {
+            InitializeComponent();
+
+            StartTime.SetTime = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1, 0, 0, 0);
+            EndTime.SetTime = DateTime.Now;
+
+            LinkagePageNumber lpn = new LinkagePageNumber();
+            pageNumber.DataContext = lpn;
+
+
+            playTimer = new DispatcherTimer();
+            playTimer.Interval = TimeSpan.FromMilliseconds(333);
+            playTimer.Tick += GetPlayBack_Pos;
+            playTimer.Start();
+
+
+            sliderPosition.MouseDown += sliderPostionMouseDown;
+            sliderPosition.MouseMove += SetPlayBack_Pos;
+            sliderPosition.Minimum = 0;
+            sliderPosition.Maximum = 100;
+            sliderPosition.IsMoveToPointEnabled = true;
+
+            infraredRayPictureBox.change_Pic("..\\..\\Image\\video.png");
+        }
+
+        void sliderPostionMouseDown(object sender, MouseEventArgs e)
+        {
+            isMouseDown = 1;
+        }
+
+        void GetPlayBack_Pos(object sender, EventArgs e)
+        {
+
+            int pos;
+            if (isMouseDown == 0 && videoState >= 0)
+            {
+                pos = NVRCsharpDemo.DVRAPI.GetInstance().Playback_GetPos(videoState);
+                sliderPosition.Value = pos;
+
+            }
+        }
+
+        void SetPlayBack_Pos(object sender, MouseEventArgs e)
+        {
+            if (videoState >= 0)
+            {
+                if (e.LeftButton == MouseButtonState.Pressed)
+                {
+                    isMouseDown = 1;
+                    NVRCsharpDemo.DVRAPI.GetInstance().Playback_SetPos(videoState, (int)sliderPosition.Value);
+                    isMouseDown = 0;
+                }
+            }
+        }
+        private void chooseClick(object sender, RoutedEventArgs e)//时间确定
+        {
+            string start = StartTime.year.Text + StartTime.month.Text + StartTime.day.Text + " " + StartTime.hour.Text + StartTime.minute.Text + StartTime.second.Text;
+            string end = EndTime.year.Text + EndTime.month.Text + EndTime.day.Text + " " + EndTime.hour.Text + EndTime.minute.Text + EndTime.second.Text;
+
+            try
+            {
+                linkStart = Convert.ToDateTime(start);//string转datatime（end）
+
+                linkEnd = Convert.ToDateTime(end);//string转datatime（end）
+                if (DateTime.Compare(linkStart,linkEnd)>=0)
+                {
+                    MessageBoxX.Show("提示", "选择的时间段不合法");
+                    return;
+                }
+  
+            }
+            catch
+            {
+                MessageBoxX.Show("提示", "选择的时间格式不合法");
+                return;
+            }
+            captureData = new SeleCaptureProvider(linkStart, linkEnd, 20);//联动事件查询事件
+            captureData.GetPageNum(out allPage);
+            rule.Max = allPage;
+            List<Capture> dataList = new List<Capture>();
+            try
+            {
+                captureData.GetPage(1,out dataList);//初始化第一页数据
+                currectPage = 1;
+            }
+            catch(Exception ex)
+            {
+                MessageBoxX.Show("提示", ex.Message);
+            }
+            linkageList.Clear();
+            for (int i = 0; i < dataList.Count; i++)
+            {
+                LinkageTarget lt = new LinkageTarget
+                {
+                    ID = i,
+                    StartTime = dataList[i].linkage_start.ToString(),
+                    EndTime = dataList[i].linkage_end.ToString(),
+                    Target = dataList[i].target_Id.ToString(),
+                    Number = dataList[i].Ship_number,
+                    ImagePath = dataList[i].picture_path,
+                };
+                linkageList.Add(lt);
+            }
+            LinkageListView.DataContext = linkageList;
+            totalPages.Text = allPage.ToString();//显示所有页数
+            currentPage.Text = currectPage.ToString();
+        }
+        private int GetTimeStamp(DateTime dt)//datatime转时间戳
+        {
+            DateTime dateStart = new DateTime(1970, 1, 1, 0, 0, 0);
+            int timeStamp = Convert.ToInt32((dt - dateStart).TotalSeconds);
+            return timeStamp;
+        }
+        private void eventClick(object sender, SelectionChangedEventArgs e)//列表选中事件
+        {
+            try
+            {
+                 _linkStrartTimeStamp= GetTimeStamp(Convert.ToDateTime(linkageList[LinkageListView.SelectedIndex].StartTime));
+                _linStopTimeStamp= GetTimeStamp(Convert.ToDateTime(linkageList[LinkageListView.SelectedIndex].EndTime));
+                picturePath = linkageList[LinkageListView.SelectedIndex].ImagePath;
+            }
+            catch
+            {
+                return;
+            }
+        }
+        private void comfirmClick(object sender, RoutedEventArgs e)//确定播放
+        {
+            //startPlay();//开始回放      
+            if (LinkageListView.SelectedItem != null)
+            {
+                linkTargetStart = _linkStrartTimeStamp;
+                linkTargetEnd = _linStopTimeStamp;
+                PictureShow w = new PictureShow();
+                System.Windows.Application.Current.MainWindow = w;
+                w.ShowDialog();
+            }
+            else
+            {
+                MessageBoxX.Show("提示", "尚未选择联动事件");
+            }
+
+        }        
+        public void realPlay()//开始播放
+        {
+            int sign = NVRCsharpDemo.DVRAPI.GetInstance().DVRAPI_Init();//初始化DVR登录 
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Stop_PlayBack(videoState);
+                videoState = -2;
+            }
+            videoState = NVRCsharpDemo.DVRAPI.GetInstance().Start_PlayBack_ByTime(3, infraredRayRealWndHandle,linkTargetStart, linkTargetEnd);//联动视频播放(长焦)
+        }
+        private void startPlay()//获取视频句柄
+        {
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Stop_PlayBack(videoState);
+                videoState = -2;
+            }
+            if (thread != null && thread.IsAlive)
+            {
+                thread.Abort();
+                thread = null;
+            }
+            infraredRayRealWndHandle = infraredRayPictureBox.Handle;//联动视频播放
+            thread= new Thread(new ThreadStart(realPlay));
+            thread.Start();
+            thread.Join();
+        }
+        private void firstPageClick(object sender, RoutedEventArgs e)//首页
+        {
+            if (allPage == 0)
+            {
+                MessageBoxX.Show("提示", "还没有进行查询");
+                return;
+            }
+            if (currectPage == 1)
+            {
+                MessageBoxX.Show("提示", "已经到首页啦");
+                return;
+            }
+            linkageList.Clear();
+            currectPage = 1;
+            List<Capture> dataList = new List<Capture>();
+            captureData.GetFirtstPage(out dataList);//初始化第一页数据
+            for (int i = 0; i < dataList.Count; i++)
+            {
+                LinkageTarget lt = new LinkageTarget
+                {
+                    ID = i,
+                    StartTime = dataList[i].linkage_start.ToString(),
+                    EndTime = dataList[i].linkage_end.ToString(),
+                    Target = dataList[i].target_Id.ToString(),
+                    Number = dataList[i].Ship_number,
+                    ImagePath = dataList[i].picture_path,
+                };
+                linkageList.Add(lt);
+            }
+            LinkageListView.DataContext = linkageList;       
+            currentPage.Text = "1";
+        }
+        private void lastPageClick(object sender, RoutedEventArgs e)//上一页
+        {
+            if (allPage == 0)
+            {
+                MessageBoxX.Show("提示", "还没有进行查询");
+                return;
+            }
+            else if (currectPage - 1 == 0)
+            {
+                MessageBoxX.Show("提示", "已经到首页啦");
+                return;
+            }
+            currectPage -= 1;
+            linkageList.Clear();
+            List<Capture> dataList = new List<Capture>();
+            captureData.GetPage(currectPage, out dataList);//初始化对应页数据
+            for (int i = 0; i < dataList.Count; i++)
+            {
+                LinkageTarget lt = new LinkageTarget
+                {
+                    ID = i,
+                    StartTime = dataList[i].linkage_start.ToString(),
+                    EndTime = dataList[i].linkage_end.ToString(),
+                    Target = dataList[i].target_Id.ToString(),
+                    Number = dataList[i].Ship_number,
+                    ImagePath = dataList[i].picture_path,
+                };
+                linkageList.Add(lt);
+            }
+            LinkageListView.DataContext = linkageList;
+            currentPage.Text = currectPage.ToString();
+        }
+        private void nextPageClick(object sender, RoutedEventArgs e)//下一页
+        {
+            if (allPage == 0)
+            {
+                MessageBoxX.Show("提示", "还没有进行查询");
+                return;
+            } 
+            if(currectPage >= allPage)
+            {
+                MessageBoxX.Show("提示", "已经到尾页");
+                return;
+            }
+            currectPage += 1;
+            linkageList.Clear();
+            List<Capture> dataList = new List<Capture>();
+            captureData.GetPage(currectPage, out dataList);//初始化对应页数据
+            for (int i = 0; i < dataList.Count; i++)
+            {
+                LinkageTarget lt = new LinkageTarget
+                {
+                    ID = i,
+                    StartTime = dataList[i].linkage_start.ToString(),
+                    EndTime = dataList[i].linkage_end.ToString(),
+                    Target = dataList[i].target_Id.ToString(),
+                    Number = dataList[i].Ship_number,
+                    ImagePath = dataList[i].picture_path,
+            };
+            linkageList.Add(lt);
+            }
+            LinkageListView.DataContext = linkageList;                     
+            currentPage.Text = currectPage.ToString();
+        }
+        private void endPageClick(object sender, RoutedEventArgs e)//末页
+        {
+            if (allPage == 0)
+            {
+                MessageBoxX.Show("提示", "还没有进行查询");
+                return;
+            }
+            if (currectPage == allPage)
+            {
+                MessageBoxX.Show("提示", "已经到尾页");
+                return;
+            }
+            linkageList.Clear();
+            List<Capture> dataList = new List<Capture>();
+            captureData.GetLastPage(out dataList);//初始化最后一页数据
+            currectPage = allPage;
+            for (int i = 0; i < dataList.Count; i++)
+            {
+                LinkageTarget lt = new LinkageTarget
+                {
+                    ID = i,
+                    StartTime = dataList[i].linkage_start.ToString(),
+                    EndTime = dataList[i].linkage_end.ToString(),
+                    Target = dataList[i].target_Id.ToString(),
+                    Number = dataList[i].Ship_number,
+                    ImagePath = dataList[i].picture_path,
+                };
+                linkageList.Add(lt);
+            }
+            LinkageListView.DataContext = linkageList;          
+            currentPage.Text = currectPage.ToString();
+        }
+        private void changeToPageClick(object sender, RoutedEventArgs e)//跳转到某页
+        {
+            if (allPage == 0)
+            {
+                MessageBoxX.Show("提示", "还没有进行查询");
+                return;
+            }
+            int toPage = 1;
+            try
+            {
+                toPage = (int)double.Parse(pageNumber.Text);//跳转到的页码
+            }
+            catch
+            {
+                MessageBoxX.Show("提示", "跳转的页码不合法");
+                pageNumber.Text = currectPage.ToString();
+                return;
+            }
+            if (toPage <= allPage && toPage >= 1)
+            {
+                currectPage = toPage;
+                linkageList.Clear();
+                List<Capture> dataList = new List<Capture>();
+                captureData.GetPage(toPage, out dataList);//初始化对应页数据              
+                for (int i = 0; i < dataList.Count; i++)
+                {
+                    LinkageTarget lt = new LinkageTarget
+                    {
+                        ID = i,
+                        StartTime = dataList[i].linkage_start.ToString(),
+                        EndTime = dataList[i].linkage_end.ToString(),
+                        Target = dataList[i].target_Id.ToString(),
+                        Number = dataList[i].Ship_number,
+                        ImagePath = dataList[i].picture_path,
+                    };
+                    linkageList.Add(lt);
+                }
+                LinkageListView.DataContext = linkageList;
+            }
+            else
+            {
+                MessageBoxX.Show("提示", "跳转的页码不合法");
+                pageNumber.Text = currectPage.ToString();
+                return;
+            }
+            currentPage.Text = toPage.ToString();
+        }
+        
+        private void PlayerPause()
+        {
+            if (playBtn.Visibility == Visibility.Visible && pauseBtn.Visibility == Visibility.Collapsed)
+            {
+                //mediaElement.Play();播放的接口
+                playBtn.Visibility = Visibility.Collapsed;
+                pauseBtn.Visibility = Visibility.Visible;
+                mediaBtn.Visibility = Visibility.Collapsed;
+            }
+            else if (pauseBtn.Visibility == Visibility.Visible && playBtn.Visibility == Visibility.Collapsed)
+            {
+                //mediaElement.Pause();暂停的接口
+                playBtn.Visibility = Visibility.Visible;
+                pauseBtn.Visibility = Visibility.Collapsed;
+                mediaBtn.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                System.Windows.Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                {
+    MessageBoxX.Show("错误提示", "未知的错误发生！");
+                }
+));
+            
+            }
+        }
+
+        private void playBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //PlayerPause();
+            if (videoState < 0)
+            {
+                startPlay();
+                pause = 0;
+            }
+            if (videoState >= 0)
+            {
+                playBtn.IsEnabled = false;
+                playBtn.Visibility = Visibility.Collapsed;
+                pauseBtn.IsEnabled = true;
+                pauseBtn.Visibility = Visibility.Visible;
+                if (pause == 0)
+                {
+                    ;
+                }
+                else if (pause == 1)
+                {
+                    NVRCsharpDemo.DVRAPI.GetInstance().Playback_Restart(videoState);
+                }
+                else if (pause == 2)
+                {
+                    NVRCsharpDemo.DVRAPI.GetInstance().Playback_Resume(videoState);
+                }
+                pause = 0;
+            }
+            else
+            {
+                playBtn.IsEnabled = true;
+                playBtn.Visibility = Visibility.Visible;
+                pauseBtn.IsEnabled = false;
+                pauseBtn.Visibility = Visibility.Collapsed;
+                infraredRayPictureBox.change_Pic("..\\..\\Image\\video.png");
+            }
+
+        }
+
+        private void mediaElement_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+        private void mediaElement_MediaOpened(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void timer_tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sliderPosition_LostMouseCapture(object sender, MouseEventArgs e)//进度条拖动
+        {
+
+        }
+
+        private void VoicePopupClick(object sender, RoutedEventArgs e)
+        {
+            voicePopup.IsOpen = true;
+        }
+
+        private void backBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Playback_Slow(videoState);
+            }
+        }
+
+        private void forwardBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Playback_Fast(videoState);
+            }
+        }
+
+        private void stopBtn_Click(object sender, RoutedEventArgs e)
+        {
+            playBtn.Visibility = Visibility.Visible;
+            playBtn.IsEnabled = true;
+            pauseBtn.Visibility = Visibility.Collapsed;
+            pauseBtn.IsEnabled = false;
+            mediaBtn.Visibility = Visibility.Visible;
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Stop_PlayBack(videoState);
+                videoState = -2;
+            }
+            if (thread != null && thread.IsAlive)
+            {
+                thread.Abort();
+                thread = null;
+            }
+        }
+
+        private void nextBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FrameBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Playback_Frame(videoState);
+                playBtn.IsEnabled = true;
+                playBtn.Visibility = Visibility.Visible;
+                pauseBtn.IsEnabled = false;
+                pauseBtn.Visibility = Visibility.Collapsed;
+                pause = 2;
+            }
+        }
+
+        private void pauseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (videoState >= 0)
+            {
+                NVRCsharpDemo.DVRAPI.GetInstance().Playback_Pause(videoState);
+                playBtn.IsEnabled = true;          
+                playBtn.Visibility = Visibility.Visible;
+                pauseBtn.IsEnabled = false;
+                pauseBtn.Visibility = Visibility.Collapsed;
+                pause = 1;
+            }
+        }
+    }
+
+    class LinkagePageNumber
+    {
+        public string number { get; set; }
+    }
+}

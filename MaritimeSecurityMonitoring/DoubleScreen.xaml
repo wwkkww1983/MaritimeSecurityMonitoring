@@ -1,0 +1,52 @@
+﻿<Window x:Class="MaritimeSecurityMonitoring.DoubleScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:DVR="clr-namespace:NVRCsharpDemo;assembly=NVRCsharpDemo"
+        xmlns:wfi ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration" 
+        xmlns:wf ="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="视频监控" Icon="image\logo.png" 
+        Width="1120" Height="630" MinWidth="1120" MinHeight="630" Background="#FF323441">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Background="DeepSkyBlue"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" FontSize="17">视频监控</TextBox>
+        <Button  HorizontalAlignment="Right" Height="22" Width="22" BorderThickness="0" Click="window_close">
+            <Button.Background>
+                <ImageBrush ImageSource="image\close.png" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Image  Source="image\logo.png" HorizontalAlignment="Left"></Image>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <wfi:WindowsFormsHost Grid.Row="0" Grid.Column="0" >
+                <!--长焦视频播放控件嵌入-->
+                <DVR:mypanel x:Name="infraredRayPictureBox1" Margin="2,2,2,0"></DVR:mypanel>
+            </wfi:WindowsFormsHost>
+            <wfi:WindowsFormsHost Grid.Row="1" Grid.Column="0"  >
+                <!--长焦视频播放控件嵌入-->
+                <DVR:mypanel x:Name="infraredRayPictureBox2" Margin="2,2,2,2"></DVR:mypanel>
+            </wfi:WindowsFormsHost>
+            <wfi:WindowsFormsHost Grid.Row="0" Grid.Column="1" >
+                <!--长焦视频播放控件嵌入-->
+                <DVR:mypanel x:Name="infraredRayPictureBox3" Margin="2,2,2,2"></DVR:mypanel>
+            </wfi:WindowsFormsHost>
+            <wfi:WindowsFormsHost Grid.Row="1" Grid.Column="1" >
+                <!--长焦视频播放控件嵌入-->
+                <DVR:mypanel x:Name="infraredRayPictureBox4" Margin="2,2,2,2"></DVR:mypanel>
+            </wfi:WindowsFormsHost>
+            <!--Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Click="tackEventClick">记录事件</-->
+        </Grid>
+    </Grid>
+</Window>
+

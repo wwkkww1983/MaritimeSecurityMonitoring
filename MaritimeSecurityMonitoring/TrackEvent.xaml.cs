@@ -1,0 +1,87 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+using MaritimeSecurityMonitoring.MainInterfacePage;
+
+using dataAnadll;
+
+namespace MaritimeSecurityMonitoring
+{
+    /// <summary>
+    /// TrackEvent.xaml 的交互逻辑
+    /// </summary>
+    public partial class TrackEvent : Window
+    {
+        private TrackEventManager track = new TrackEventManager();//追踪事件入库
+        private DateTime dateTime1;
+        private DateTime dateTime2;
+        public TrackEvent()
+        {
+            InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            if (MainWindow.doubleScreen)
+            {
+                dateTime1 =DoubleScreen.startime;//开始时间
+                start.Text = dateTime1.ToString();
+
+                dateTime2 = GetTime(DoubleScreen.videoEndTime.ToString());//结束时间
+                end.Text = dateTime2.ToString();
+            }
+            else
+            {
+                dateTime1 = GetTime(MonitoringX.trackStartTime.ToString());//开始时间
+                start.Text = dateTime1.ToString();
+
+                dateTime2 = GetTime(followVideo.videoEndTime.ToString());//结束时间
+                end.Text = dateTime2.ToString();
+            }
+            this.Topmost = true;//置于顶层
+        }
+
+        private void closeWindowClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();//关闭按钮
+        }
+        private void dragMoveWindow(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();//实现整个窗口的拖动
+        }
+        private void comfirmClick(object sender, RoutedEventArgs e)
+        {
+
+            track.WriteTrackEvent(names.Text, events.Text, dateTime1, dateTime2,MonitoringX.nowVideoType);//追踪事件入库
+            this.Close();//关闭按钮
+        }
+        private void cancelClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();//关闭按钮
+        }
+        private DateTime GetTime(string timeStamp)
+        {
+            DateTime dtStart = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
+            long lTime = long.Parse(timeStamp + "0000000");
+            TimeSpan toNow = new TimeSpan(lTime); return dtStart.Add(toNow);
+        }
+
+        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

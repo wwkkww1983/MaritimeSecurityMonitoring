@@ -1,0 +1,9 @@
+YIMAENC 自定义海图功能开发步骤: 
+
+1. 要使用自定义海图功能, 先要使用SymbolEditor.exe 制作自定义符号(如果只需S57现有符号就不用了). SymbolEditor工具在 "YimaEncSDK Trial Version 3.3.2\YimaEncNavigator Demo(VC++版本)"目录下, 注意: SymbolEditor运行时必须有 \S57Lib 和 \MarineMap 目录为伴, 其生成的符号库保存在 \MarineMap 目录的"SymbolLib"文件中;
+
+2. 制作好需要的符号后, 要把制作好的SymbolLib拷贝到你的工程目录的 MarineMap 子目录中(如果你的工程目录与SymbolEditor在一处就不用了);
+
+3. 然后要配置 \MarineMap 目录下的 Layers 文件, 文件配置方法参见 "YimaEncSDK Trial Version 3.3.2\YimaEncNavigator Demo(VC++版本)\MarineMap\Layers 文件说明.txt";
+
+4. 配置好Layers文件, 也就是把自定义海图的所有图层结构及显示风格都定下来后, 就可以调用接口对自定义海图进行编程实现自定义物标对象的添加,删除和修改工作了.

@@ -1,0 +1,141 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+using MaritimeSecurityMonitoring.MainInterfacePage;
+
+namespace MaritimeSecurityMonitoring.Video
+{
+    /// <summary>
+    /// SetMeasuringScale.xaml 的交互逻辑
+    /// </summary>
+    public partial class SetMeasuringScale : Window
+    {
+        private SetConfig config = new SetConfig();//配置文件接口实例
+        public SetMeasuringScale()
+        {
+            InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
+            Scale s = new Scale
+            {
+                value = config.read_string("messure", "value1"),
+            };
+            test1.DataContext = s;
+            com.Text= config.read_string("messure", "value2");
+        }
+        private void closeWindowClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void dragMoveWindow(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();//实现整个窗口的拖动
+        }
+        private void sureClick(object sender, RoutedEventArgs e)
+        {
+            MainWindow.opeation.OptionName = "指定比例尺";//日志入库
+            MainWindow.opeation.LogType = 2;
+            MainWindow.opeation.OptionTime = GetTime(GetTimeStampS().ToString());
+            MainWindow.OperationLogData.WriteOperationLog(MainWindow.opeation);
+            if (rad1.IsChecked == false)
+            {
+                try
+                {
+                    if (int.Parse(test1.Text) > rule.Max || int.Parse(test1.Text) < rule.Min)
+                        MessageBoxX.Show("提示", "比例尺过大或为负！");
+                    else
+                    {
+                        App app = (App)App.Current;
+                        if (MonitoringX.page == "当前")
+                        {
+                            app.chartCtrl.SetScale(int.Parse(test1.Text));
+                        }else if(MonitoringX.page == "回放")
+                        {
+                            app.returnBack.SetScale(int.Parse(test1.Text));
+                        }
+                        config.write_string("messure", "value1", test1.Text);
+                        this.Close();
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBoxX.Show("警告", "比例尺非法或为空！");
+                }
+            }
+            else
+            {
+                string B = com.Text;
+                float bili = (float)double.Parse(B);
+                App app = (App)App.Current;
+                config.write_string("messure", "value2", B);
+
+                if (MonitoringX.page == "当前")
+                {
+                    app.chartCtrl.SetScale(bili);
+                }
+                else if (MonitoringX.page == "回放")
+                {
+                    app.returnBack.SetScale(bili);
+                }
+               
+                this.Close();
+            }
+        }
+        public static int GetTimeStampS()//当前时间转换时间戳
+        {
+            TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            return Convert.ToInt32(ts.TotalSeconds);
+        }
+        public static DateTime GetTime(string timeStamp)//时间戳转datatime
+        {
+            DateTime dtStart = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
+            long lTime = long.Parse(timeStamp + "0000000");
+            TimeSpan toNow = new TimeSpan(lTime);
+            return dtStart.Add(toNow);
+        }
+        private void cancelClick(object sender, RoutedEventArgs e)
+        {
+
+            test1.Text = "";
+            this.Close();
+        }
+
+        private void ChooseClick(object sender, RoutedEventArgs e)
+        {
+            com.IsEnabled = true;
+            test1.IsEnabled = false;
+        }
+
+        private void SetClick(object sender, RoutedEventArgs e)
+        {
+            com.IsEnabled = false;
+            test1.IsEnabled = true;
+        }
+
+        private void CommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Close();
+        }
+    }
+
+    class Scale
+    {
+        public string value { get; set; }
+    }
+}

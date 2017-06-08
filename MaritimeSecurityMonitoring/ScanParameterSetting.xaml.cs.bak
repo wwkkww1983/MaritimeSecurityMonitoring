@@ -1,0 +1,191 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+using dataAnadll;
+
+namespace MaritimeSecurityMonitoring
+{
+    /// <summary>
+    /// ScanParameterSetting.xaml 的交互逻辑
+    /// </summary>
+    public partial class ScanParameterSetting : Window
+    {
+        /*public static int left=45;
+        public static int right=45;
+        public static int speed=40;*/
+        public static ScanParameter sp = new ScanParameter()
+        {
+            angle1 = "45",
+            angle2 = "45",
+            percent = "40",
+        };
+
+        public ScanParameterSetting()
+        {
+            InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            DataContext = sp;
+        }
+        private void closeWindowClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();//关闭界面
+        }
+        private void dragMoveWindow(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();//实现整个窗口的拖动
+        }
+
+        int min, max;
+        private void AddClick(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+            if (b.Tag.ToString() == "Percent")
+            {
+                min = 20;
+                max = 100;
+            }
+            else
+            {
+                min = 0;
+                max = 180;
+            }
+
+            TextBox tb = FindName(b.Tag.ToString()) as TextBox;
+            int itry;
+            if (!int.TryParse(tb.Text, out itry)) return;
+            else if (itry < max && itry >= min)
+                tb.Text = Convert.ToString(itry + 1);
+            else
+                tb.Text = min.ToString();
+        }
+
+        private void MinusClick(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+            if (b.Tag.ToString() == "Percent")
+            {
+                min = 20;
+                max = 100;
+            }
+            else
+            {
+                min = 0;
+                max = 180;
+            }
+
+            TextBox tb = FindName(b.Tag.ToString()) as TextBox;
+            int itry;
+            if (!int.TryParse(tb.Text, out itry)) return;
+            else if (itry > max || itry <= min)
+                tb.Text = max.ToString();
+            else
+                tb.Text = Convert.ToString(itry - 1);
+        }
+
+        /*private void leftIncreaseClick(object sender, RoutedEventArgs e)//左加
+        {
+            if (left >= -180 && left <= 180)
+            {
+                left++;
+                leftAngle.Text = left.ToString();
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("值域范围为-180 — 180");
+            }
+        }
+        private void leftReduceClick(object sender, RoutedEventArgs e)//左减
+        {
+            if (left >= -180 && left <= 180)
+            {
+                left--;
+                leftAngle.Text = left.ToString();
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("值域范围为-180 — 180");
+            }
+        }
+        private void rightIncreaseClick(object sender, RoutedEventArgs e)//右加
+        {
+            if (right >= -180 && right <= 180)
+            {
+                right++;
+                rightAngle.Text = right.ToString();
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("值域范围为-180 — 180");
+            }
+        }
+        private void rightReduceClick(object sender, RoutedEventArgs e)//右减
+        {
+            if (right >= -180 && right <= 180)
+            {
+                right--;
+                rightAngle.Text = right.ToString();
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("值域范围为-180 — 180");
+            }
+        }
+        private void speedIncreaceClick(object sender, RoutedEventArgs e)//速度加
+        {
+            if (speed >= 20 && speed <= 100)
+            {
+                speed++;
+                maxSpeed.Text = speed.ToString();
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("值域范围为20 — 100");
+            }
+        }
+        private void speedReduceClick(object sender, RoutedEventArgs e)//速度减
+        {
+            if (speed >= 20 && speed <= 100)
+            {
+                speed--;
+                maxSpeed.Text = speed.ToString();
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("值域范围为20 — 100");
+            }
+        }*/
+        private void comfirmClick(object sender, RoutedEventArgs e)//确定
+        {
+            sp.angle1 = Angle1.Text;
+            sp.angle2 = Angle2.Text;
+            sp.percent = Percent.Text;
+            this.Close();
+        }
+        private void cancelClick(object sender, RoutedEventArgs e)//取消
+        {
+             sp.angle1 = "45";
+             sp.angle2 = "45";
+             sp.percent = "40";
+             this.Close();
+        }
+    }
+
+    public class ScanParameter
+    {
+        public string angle1 { get; set; }
+        public string angle2 { get; set; }
+        public string percent { get; set; }
+    }
+}
+

@@ -1,0 +1,156 @@
+﻿<Window x:Class="MaritimeSecurityMonitoring.QueryTrack"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:tk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="航迹查询" Width="450" MinWidth="450" MaxWidth="450" Height="480" MinHeight="480" MaxHeight="480"   
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize" MouseLeftButtonDown="dragMoveWindow">
+    <Window.Resources>
+        <ControlTemplate x:Key="CornerLabel" TargetType="{x:Type Label}">
+            <Border BorderThickness="0" CornerRadius="8,8,0,0" Background="#FF4A79D8">
+                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="CornerButton" TargetType="{x:Type Button}">
+            <Border x:Name="bd" BorderThickness="0" CornerRadius="5 5 5 5" Background="#FF4A79D8">
+                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF6D9DFF"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF005AE2"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="TriButton" TargetType="{x:Type ToggleButton}">
+            <Border x:Name="bd1" BorderThickness="1" BorderBrush="#FFAAAAAA" Background="LightGray">
+                <Polygon Stretch="Fill" Points="0,0 10,0 5,10" Margin="4 10">
+                    <Polygon.Fill>
+                        <SolidColorBrush Color="Black"/>
+                    </Polygon.Fill>
+                </Polygon>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bd1" Property="Background" Value="#FFA9D7FF"/>
+                    <Setter TargetName="bd1" Property="BorderBrush" Value="#FF3C6DC3"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="bd1" Property="Background" Value="#FFA1CDF3"/>
+                </Trigger>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter TargetName="bd1" Property="Background" Value="#FFA1CDF3"/>
+                    <Setter TargetName="bd1" Property="BorderBrush" Value="#FF3C6DC3"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Style TargetType="{x:Type ListBoxItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Border x:Name="bd1" BorderThickness="1">
+                            <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="8 2 0 2"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd1" Property="Background" Value="Silver"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <RoutedUICommand x:Key="Cancel"/>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Key="Esc" Command="{StaticResource Cancel}"/>
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource Cancel}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed"/>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Template="{StaticResource CornerLabel}" FontSize="20" Foreground="White">航迹查询</Label>
+        <Button Height="22" Width="22" Margin="0 0 10 0" HorizontalAlignment="Right" BorderThickness="0" Click="closeWindowClick">
+            <Image Source="Image/Close_new.png"/>
+            <Button.Background>
+                <SolidColorBrush Color="#FF4A79D8"/>
+            </Button.Background>
+        </Button>
+
+        <Border Grid.Row="1" BorderThickness="0" Background="White" CornerRadius="0 0 8 8">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4.8*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" BorderThickness="1" BorderBrush="Gray" CornerRadius="8" Margin="50 40 50 35">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.3*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="0.4*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <WrapPanel Grid.Row="1" VerticalAlignment="Center">
+                            <RadioButton FontSize="20" VerticalContentAlignment="Center" IsChecked="True" Margin="21 0" Click="radarClick">雷达1</RadioButton>
+                            <RadioButton FontSize="20" VerticalContentAlignment="Center" Margin="0 0 21 0" Click="radar2Click">雷达2</RadioButton>
+                            <RadioButton FontSize="20" VerticalContentAlignment="Center" Margin="0 0 21 0" Click="AISClick">AIS</RadioButton>
+                            <RadioButton FontSize="20" VerticalContentAlignment="Center" Click="MixClick">融合</RadioButton>
+                        </WrapPanel>
+                        
+                        <Grid Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="1.8*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <TextBlock Grid.Row="0" Grid.Column="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20 0 0 0">开始时间</TextBlock>
+                            <tk:DateTimePicker Grid.Row="0" Grid.Column="1" ShowButtonSpinner="False" AllowTextInput="False" MouseWheelActiveOnFocus="True"
+                                               FontSize="16" VerticalAlignment="Center" Format="Custom" FormatString="yyyy-MM-dd HH:mm:ss" TimeFormat="LongTime" Margin="5 0 32 0" Name="startTime"/>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20 0 0 0">结束时间</TextBlock>
+                            <tk:DateTimePicker Grid.Row="1" Grid.Column="1" ShowButtonSpinner="False" AllowTextInput="False" MouseWheelActiveOnFocus="True"
+                                               FontSize="16" VerticalAlignment="Center" Format="Custom" FormatString="yyyy-MM-dd HH:mm:ss" TimeFormat="LongTime" Margin="5 0 32 0" Name="endTime"/>
+
+                            <TextBlock Grid.Row="2" Grid.Column="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20 0 0 0">查询目标</TextBlock>
+                            <TextBox x:Name="target" Grid.Row="2" Grid.Column="1" FontSize="18" VerticalAlignment="Center" IsReadOnly="True" Margin="5 0 32 0"/>
+                            <ToggleButton Grid.Row="2" Grid.Column="1" Template="{StaticResource TriButton}" Height="{Binding ElementName=target, Path=ActualHeight}" Width="19" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 32 0" IsChecked="{Binding ElementName=targetPopup, Path=IsOpen}" Click="PullDownClick"/>
+                            <Popup Grid.Row="2" Grid.Column="1" x:Name="targetPopup" StaysOpen="False" IsOpen="False" PlacementTarget="{Binding ElementName=target}" Placement="Bottom" AllowsTransparency="True" PopupAnimation="Slide" MaxHeight="125">
+                                <Grid Width="186">
+                                    <ListBox Name="targetListBox" ItemsSource="{Binding}" SelectionChanged="ChooseTargetClick"
+                                              Background="White" Foreground="Black" FontSize="18" BorderThickness="1" BorderBrush="Gray">
+                                    </ListBox>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="1" Template="{StaticResource CornerButton}" Height="35" Width="100" FontSize="20" Foreground="White" VerticalAlignment="Top" Margin="0 0 70 0" Click="ConfirmClick">确定</Button>
+                    <Button Grid.Column="2" Template="{StaticResource CornerButton}" Height="35" Width="100" FontSize="20" Foreground="White" VerticalAlignment="Top" Click="CancelClick">取消</Button>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

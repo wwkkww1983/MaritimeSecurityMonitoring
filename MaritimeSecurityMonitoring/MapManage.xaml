@@ -1,0 +1,171 @@
+﻿<Window x:Class="MaritimeSecurityMonitoring.MapManage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="图库管理" Width="900" MaxWidth="900" MinWidth="900" Height="600" MaxHeight="600" MinHeight="600" 
+        WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent" MouseLeftButtonDown="dragMoveWindow" Loaded="Window_Loaded">
+    <Window.Resources>
+        <ControlTemplate x:Key="CornerLabel" TargetType="{x:Type Label}">
+            <Border BorderThickness="0" CornerRadius="8,8,0,0" Background="#FF4A79D8">
+                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="CornerButton" TargetType="{x:Type Button}">
+            <Border x:Name="bd" BorderThickness="0" CornerRadius="5 5 5 5" Background="#FF4A79D8">
+                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF6D9DFF"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="bd" Property="Background" Value="#FF005AE2"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Style TargetType="{x:Type ListBoxItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Border x:Name="bd1" BorderThickness="1" Background="AliceBlue">
+                            <ContentPresenter Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15 5 0 5"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd1" Property="Background" Value="#FFC2E6FB"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="bd1" Property="Background" Value="#FFC2E6FB"/>
+                                <Setter TargetName="bd1" Property="BorderBrush" Value="Silver"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <RoutedUICommand x:Key="Cancel"/>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Key="Esc" Command="{StaticResource Cancel}"/>
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource Cancel}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed"/>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Template="{StaticResource CornerLabel}" FontSize="20" Foreground="White">图库管理</Label>
+        <Button Height="22" Width="22" Margin="0 0 10 0" HorizontalAlignment="Right" BorderThickness="0" Click="closeWindowClick">
+            <Image Source="Image/Close_new.png"/>
+            <Button.Background>
+                <SolidColorBrush Color="#FF4A79D8"/>
+            </Button.Background>
+        </Button>
+
+        <Border Grid.Row="1" BorderThickness="0" Background="White" CornerRadius="0 0 8 8">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="1.4*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ListBox Grid.Column="1" Width="300" Height="150" Background="AliceBlue" FontSize="20" VerticalAlignment="Center" SelectionChanged="chooseMaps" Name="addMapsSelection">
+
+                    </ListBox>
+
+                    <Grid Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="1" Template="{StaticResource CornerButton}" Height="30" Width="80" FontSize="20" Foreground="White" VerticalAlignment="Center" Margin="50 0 0 0" Click="showInfo_Click">概览</Button>
+                        <Button Grid.Row="2" Template="{StaticResource CornerButton}" Height="30" Width="80" FontSize="20" Foreground="White" VerticalAlignment="Center" Margin="50 0 0 0" Click="addMap_Click">添加</Button>
+                        <Button Grid.Row="3" Template="{StaticResource CornerButton}" Height="30" Width="80" FontSize="20" Foreground="White" VerticalAlignment="Center" Margin="50 0 0 0" Click="delete_Click">删除</Button>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0" BorderThickness="1" BorderBrush="Gray" CornerRadius="8" Margin="65 10 40 70">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.3*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="0.4*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="1.1*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20 0 0 0">原始比例尺：</TextBlock>
+                            <TextBox Grid.Row="1" Grid.Column="1" x:Name="measuring" FontSize="20" IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="0 0 40 0"/>
+
+                            <TextBlock Grid.Row="2" Grid.Column="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="32 0 51 0">版本号：</TextBlock>
+                            <TextBox Grid.Row="2" Grid.Column="1" x:Name="edition" FontSize="20" IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="0 0 40 0"/>
+
+                            <TextBlock Grid.Row="3" Grid.Column="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20 0 0 0">升级版本号：</TextBlock>
+                            <TextBox Grid.Row="3" Grid.Column="1" x:Name="upgradedVersion" FontSize="20" IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="0 0 40 0"/>
+
+                            <TextBlock Grid.Row="4" Grid.Column="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="32 0 31 0">编辑日期：</TextBlock>
+                            <TextBox Grid.Row="4" Grid.Column="1" x:Name="memory" FontSize="20" IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="0 0 40 0"/>
+                        </Grid>
+                    </Border>
+                    <TextBlock Grid.Column="0" Background="White" Foreground="#FF4A79D8" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="75 0">海图信息</TextBlock>
+
+                    <Border Grid.Column="1" BorderThickness="1" BorderBrush="Gray" CornerRadius="8" Margin="40 10 65 70">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.3*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="0.4*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="117*"/>
+                                <ColumnDefinition Width="227*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="1" Grid.Column="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="35,13,20.8,13" Height="26" Width="61">左边：</TextBlock>
+                            <TextBox Grid.Row="1" Grid.Column="1" x:Name="leftBoundary" FontSize="20" IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="1.2,12,10,12" Height="28"/>
+
+                            <TextBlock Grid.Row="2" Grid.Column="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="35,13,20.8,13" Height="26" Width="61">右边：</TextBlock>
+                            <TextBox Grid.Row="2" Grid.Column="1" x:Name="rightBoundary" FontSize="20" IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="1.2,12,10,12" Height="28"/>
+
+                            <TextBlock Grid.Row="3" Grid.Column="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="35,13,20.8,13" Height="26" Width="61">上边：</TextBlock>
+                            <TextBox Grid.Row="3" Grid.Column="1" x:Name="topBoundary" FontSize="20" IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="1.2,12,10,12" Height="28"/>
+
+                            <TextBlock Grid.Row="4" Grid.Column="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="35,13,20.8,13" Height="26" Width="61">下边：</TextBlock>
+                            <TextBox Grid.Row="4" Grid.Column="1" x:Name="bottomBoundary" FontSize="20" IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="1.2,12,10,12" Height="28"/>
+                        </Grid>
+                    </Border>
+                    <TextBlock Grid.Column="1" Background="White" Foreground="#FF4A79D8" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50 0">海图范围</TextBlock>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
